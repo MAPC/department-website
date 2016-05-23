@@ -1,0 +1,58 @@
+.ui.inverted.vertical.masthead.center.aligned.segment#masthead
+  .ui.text.container
+    %h1.ui.inverted.header.massive
+      Welcome
+
+.ui.container.section
+  %h2.ui.left.aligned
+    Services
+
+  - @groups.each do |group|
+    .ui.accordion.middle.aligned.selection.relaxed.list
+      .ui.item
+        .title
+          %h3
+            = group.title
+          %p
+            = group.tagline
+        .content
+          .big-menu-group.grid-row{:style => "display: block;"}
+            - group.services.each do |service|
+              = link_to(service, class: "one-third") do
+                %i.icon.big.rocket
+                = service.title
+                
+
+  %h2
+    Showcase
+
+  .big-menu-group.grid-row{:style => "display: block;"}
+    - @projects.each do |project|
+      %a.one-third{:href => "#"}
+        %i.icon.big.rocket
+        = project.title
+
+  %h2
+    Tools
+
+  .big-menu-group.grid-row{:style => "display: block;"}
+    - @tools.each do |tool|
+      %a.one-third{:href => "#"}
+        %i.icon.big.rocket
+        = tool.title
+
+/ :javascript
+/   $.ajax({
+/     url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://medium.com/feed/@ev/"),
+/     dataType : 'json',
+/     success  : function (data) {
+/       if (data.responseData.feed && data.responseData.feed.entries) {
+/         $.each(data.responseData.feed.entries, function (i, e) {
+/           console.log("------------------------");
+/           console.log("title      : " + e.title);
+/           console.log("author     : " + e.author);
+/           console.log("description: " + e.description);
+/         });
+/       }
+/     }
+/   });

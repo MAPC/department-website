@@ -1,0 +1,34 @@
+.global-navigation-wrap
+  %nav.global-navigation.one-fourth{:role => "navigation"}
+    .site-logo-wrap
+      %img.site-logo.logo-white{:alt => "City of Oakland", :src => "/img/coo-logo-white.svg"}/
+      %a.header-nav-button.navicon-button.x.open{:href => "#"}
+        .navicon
+    %ul.top-level-menu.nav-menu
+      %li
+        %a.menu-item.if{:class => "{% page.slug =="}>
+        index" %}selected{% endif %}" href="/">
+        %strong Introduction
+  {% assign vis_identity_slugs = 'visual-identity-intro' | split: '' %}
+  %ul.top-level-menu.nav-menu.if.vis_identity_slugs.contains.endif{:class => "{% page.slug %}open{% %}"}
+    %li
+      %a.menu-item.sub-menu-toggle.if{:class => "{% page.slug ==", :href => "#"}>
+      visual-identity" %}selected{% endif %}">
+      %strong Visual Identity
+    %ul.nav-sub-menu.nav-menu
+      %li
+        %a.menu-item.if{:class => "{% page.slug =="}>
+        visual-identity-intro" %}selected{% endif %}" href="/visual-identity-intro/">
+        Introduction
+    %li
+      %a.menu-item.if{:class => "{% page.slug =="}>
+      identity" %}selected{% endif %}" href="/identity/">
+      Identity
+  %li
+    %a.menu-item.if{:class => "{% page.slug =="}>
+    typography" %}selected{% endif %}" href="/typography/">
+    Typography
+%li
+  %a.menu-item.if{:class => "{% page.slug =="}>
+  color" %}selected{% endif %}" href="/color/">
+  Color

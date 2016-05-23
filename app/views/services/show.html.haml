@@ -1,0 +1,31 @@
+%main
+  %section.subheader
+    .breadcrumb-wrap
+      %nav.breadcrumbs
+        %a{:href => "#"} Home
+        %a{:href => "#"} Breadcrumb
+        %a{:href => "#"} Page level 1
+        %span Current Page Title
+    / .breadcrumb-wrap
+    .container
+      .grid-row
+        .section-info.two-thirds.column-shift
+          %h1 
+            = @service.group.title
+          %p There is a purpose for our play, play is more than physical activity and bouncing balls. Play produces great outcomes.
+        %nav.section-menu.one-fourth
+          - @service.group.services.each do |service|
+            = link_to(service.title, service, class: "menu-item")
+      / .grid-row
+    / .container
+
+%section.container
+  %h1
+    = @service.title
+  .grid-row
+    %aside.one-fourth
+      %button.btn
+        E-mail Us
+        %span.lnr.lnr-arrow-right
+    .two-thirds.column-shift
+      = markdown @service.desc

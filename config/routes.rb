@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+
+  namespace :admin do
+    resources :groups
+    resources :projects
+    resources :services
+    resources :tools
+
+    root to: "groups#index"
+  end
+
+  resources :projects
+  resources :services
+  resources :tools
+  resources :groups
+
+  root to: "welcome#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
