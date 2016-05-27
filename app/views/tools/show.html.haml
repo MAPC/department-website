@@ -1,0 +1,15 @@
+%main
+  %section.subheader
+    .breadcrumb-wrap
+      %nav.breadcrumbs
+        = render_breadcrumbs
+        %span 
+          = @tool.title
+    .container
+      .grid-row
+        .section-info.two-thirds
+          %h1
+            = @tool.title
+  %section
+    .container
+      = markdown @tool.body

@@ -1,0 +1,21 @@
+%main
+  %section.subheader
+    .breadcrumb-wrap
+      %nav.breadcrumbs
+        = render_breadcrumbs
+    .container
+      .grid-row
+        .section-info.two-thirds.column-shift
+          %h1 
+            = @project.title
+
+%section.container
+  %h1
+    = @project.title
+  .grid-row
+    %aside.one-fourth
+      %button.btn
+        E-mail Us
+        %span.lnr.lnr-arrow-right
+    .two-thirds.column-shift
+      = markdown @project.body

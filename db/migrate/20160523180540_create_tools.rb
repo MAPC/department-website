@@ -5,6 +5,7 @@ class CreateTools < ActiveRecord::Migration
       t.string :screenshot
       t.string :url
       t.text :body
+      t.timestamps null: false
     end
   end
 end
