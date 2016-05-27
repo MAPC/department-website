@@ -1,7 +1,15 @@
 .ui.inverted.vertical.masthead.center.aligned.segment#masthead
-  .ui.text.container
-    %h1.ui.inverted.header.massive
-      Welcome
+  .container
+    .grid-row
+      .section-info.two-thirds
+        %h1 Welcome to Data Services
+        %p Using technology and data to influence decision-makers
+      %nav.section-menu.one-third
+        %a.menu-item{:href => "#section-1"} Services
+        %a.menu-item{:href => "#section-2"} Our Work
+        %a.menu-item{:href => "#section-3"} News
+        %a.menu-item{:href => "#section-4"} Tools
+        %a.menu-item{:href => "#section-4"} Data
 
 .ui.container.section
   %h2.ui.left.aligned
@@ -24,35 +32,60 @@
                 
 
   %h2
-    Showcase
-
-  .big-menu-group.grid-row{:style => "display: block;"}
+    Our Work
+  .grid-row
     - @projects.each do |project|
-      %a.one-third{:href => "#"}
-        %i.icon.big.rocket
-        = project.title
+      .post-excerpt.one-third
+        %img{:alt => "", :src => project.preview.url(:thumbnail)} 
+          %p.post-data
+            %a{:href => "#"} Category
+            \-
+            %time{:datetime => ""} September 9, 2015
+          %h3
+            %a{:href => "#"} 
+              = project.title
 
   %h2
-    Tools
+    News
 
-  .big-menu-group.grid-row{:style => "display: block;"}
-    - @tools.each do |tool|
-      %a.one-third{:href => "#"}
-        %i.icon.big.rocket
-        = tool.title
+  .grid-row
+    .two-thirds
+      %h2 City News
+      .post-excerpt
+        %p.post-data
+          %a{:href => "#"} Category
+          \-
+          %time{:datetime => ""} September 9, 2015
+        %h3
+          %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
+        %p The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.
+      .post-excerpt
+        %p.post-data
+          %a{:href => "#"} Category
+          \-
+          %time{:datetime => ""} September 9, 2015
+        %h3
+          %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
+      .post-excerpt
+        %p.post-data
+          %a{:href => "#"} Category
+          \-
+          %time{:datetime => ""} September 9, 2015
+        %h3
+          %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
+        %p The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.
+    %aside.one-third
+      %h4.aside-title Other News
+      %ul.list-no-style
+        %li
+          %a{:href => ""} Some other News about Oakland
+        %li
+          %a{:href => ""} Some other News about Oakland with a longer title
+        %li
+          %a{:href => ""} Some other News about Oakland
+        %li
+          %a{:href => ""} Some other News about Oakland with a really really really really really long title
+        %li
+          %a{:href => ""} Some other News about Oakland
 
-/ :javascript
-/   $.ajax({
-/     url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://medium.com/feed/@ev/"),
-/     dataType : 'json',
-/     success  : function (data) {
-/       if (data.responseData.feed && data.responseData.feed.entries) {
-/         $.each(data.responseData.feed.entries, function (i, e) {
-/           console.log("------------------------");
-/           console.log("title      : " + e.title);
-/           console.log("author     : " + e.author);
-/           console.log("description: " + e.description);
-/         });
-/       }
-/     }
-/   });
+

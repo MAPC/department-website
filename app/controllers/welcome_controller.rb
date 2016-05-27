@@ -1,7 +1,6 @@
 class WelcomeController < ApplicationController
   def index
     @groups = Group.all.includes(:services)
-    @projects = Project.all
-    @tools = Tool.all
+    @projects = Project.limit(3)
   end
 end

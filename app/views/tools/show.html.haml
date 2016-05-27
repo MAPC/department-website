@@ -1,0 +1,17 @@
+%main
+  %section.subheader
+    .breadcrumb-wrap
+      %nav.breadcrumbs
+        %a{:href => "#"} Home
+        %a{:href => "#"} Breadcrumb
+        %a{:href => "#"} Page level 1
+        %span 
+          = @tool.title
+    .container
+      .grid-row
+        .section-info.two-thirds
+          %h1
+            = @tool.title
+  %section
+    .container
+      = markdown @tool.body
