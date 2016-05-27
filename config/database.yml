@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: departmentsite_development
+  database: departmentsite_production
