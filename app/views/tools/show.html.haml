@@ -2,9 +2,7 @@
   %section.subheader
     .breadcrumb-wrap
       %nav.breadcrumbs
-        %a{:href => "#"} Home
-        %a{:href => "#"} Breadcrumb
-        %a{:href => "#"} Page level 1
+        = render_breadcrumbs
         %span 
           = @tool.title
     .container

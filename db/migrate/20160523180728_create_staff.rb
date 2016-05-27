@@ -5,6 +5,7 @@ class CreateStaff < ActiveRecord::Migration
       t.string :email
       t.text :bio
       t.references :group
+      t.timestamps null: false
     end
   end
 end

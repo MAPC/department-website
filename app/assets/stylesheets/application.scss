@@ -13,223 +13,240 @@
  *= require_self
  */
 
-@charset "utf-8";
-@import "normalize";
+ @import "primer";
 
-
-
-// Global variables for Neat
-$max-width: 916px !default;
-$column: 3.625rem !default;
-$gutter: 1.25rem !default;
-$visual-grid: true; // Turn this on/off to debug the grid
-
-@import "bourbon/bourbon";
-@import "neat/neat";
-
-// Bourbon and Neat
-@import "bourbon/bourbon";
-@import "neat/neat";
-
-// Global requirements
-@import "typography";
-@import "variables";
-@import "mixins";
-@import "icons";
-
-// Basecoat
-@import "base";
-@import "type";
-@import "layout";
-
-@import "menu";
-@import "flex-table";
-@import "text-elements";
-@import "sections";
-@import "media";
-
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
+.site-logo {
+  width: 150px;
+  height: 80px;
 }
 
-
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
-
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
-    }
-  }
+.menu-item-plain {
+  @extend .menu-item;
 }
 
-#body {
-  background-color: #ffffff
+.subheader {
+  background-color: #4A148C;
 }
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
-}
+// @charset "utf-8";
+// @import "oakland/normalize";
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
 
-#menu {
-  height: 150px;
-  background-color: #f4f5f4;
-  margin: 0;
-}
 
-.hidden.menu {
-  display: none;
-}
+// // Global variables for Neat
+// $max-width: 916px !default;
+// $column: 3.625rem !default;
+// $gutter: 1.25rem !default;
+// $visual-grid: true; // Turn this on/off to debug the grid
 
-.masthead.segment {
-  min-height: 25rem;
-  padding: 1em 0em;
-}
-.masthead .logo.item img {
-  margin-right: 1em;
-}
-.masthead .ui.menu .ui.button {
-  margin-left: 0.5em;
-}
-.masthead h1.ui.header {
-  margin-top: 3em;
-  margin-bottom: 0em;
-  font-size: 4em;
-  font-weight: normal;
-}
-.masthead h2 {
-  font-size: 1.7em;
-  font-weight: normal;
-}
+// @import "bourbon/bourbon";
+// @import "neat/neat";
 
-.ui.vertical.stripe {
-  padding: 8em 0em;
-}
-.ui.vertical.stripe h3 {
-  font-size: 2em;
-}
-.ui.vertical.stripe .button + h3,
-.ui.vertical.stripe p + h3 {
-  margin-top: 3em;
-}
-.ui.vertical.stripe .floated.image {
-  clear: both;
-}
-.ui.vertical.stripe p {
-  font-size: 1.33em;
-}
-.ui.vertical.stripe .horizontal.divider {
-  margin: 3em 0em;
-}
+// // Bourbon and Neat
+// @import "bourbon/bourbon";
+// @import "neat/neat";
 
-.quote.stripe.segment {
-  padding: 0em;
-}
-.quote.stripe.segment .grid .column {
-  padding-top: 5em;
-  padding-bottom: 5em;
-}
+// // Global requirements
+// @import "oakland/typography";
+// @import "oakland/variables";
+// @import "oakland/mixins";
+// @import "oakland/icons";
 
-.footer.segment {
-  padding: 5em 0em;
-}
+// // Basecoat
+// @import "oakland/base";
+// @import "oakland/type";
+// @import "oakland/layout";
 
-.secondary.pointing.menu .toc.item {
-  display: none;
-}
+// @import "oakland/menu";
+// @import "oakland/flex-table";
+// @import "oakland/text-elements";
+// @import "oakland/sections";
+// @import "oakland/media";
 
-@media only screen and (max-width: 700px) {
-  .ui.fixed.menu {
-    display: none !important;
-  }
-  .secondary.pointing.menu .item,
-  .secondary.pointing.menu .menu {
-    display: none;
-  }
-  .secondary.pointing.menu .toc.item {
-    display: block;
-  }
-  .masthead.segment {
-    min-height: 350px;
-  }
-  .masthead h1.ui.header {
-    font-size: 2em;
-    margin-top: 1.5em;
-  }
-  .masthead h2 {
-    margin-top: 0.5em;
-    font-size: 1.5em;
-  }
-}
+// .logo img {
+//   height: 18.75em;
+//   margin-top: 6em;
+// }
 
-.ui.left.sidebar, .ui.right.sidebar {
-  width: 500px;
-}
 
-.ui.selection.list .list>.item, .ui.selection.list>.item {
-  border-radius: 0;
-  margin-bottom: 1rem;
-}
+// .doc {
+//   margin: 3em 0;
+//   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//   font-size: 1.1em;
+//   font-weight: 300;
 
-.ui.button {
-  border-radius: 0;
-}
+//   a {
+//     border: 1px solid white;
+//     border-radius: 3px;
+//     padding: 0.75em 0.7em;
+//     color: white;
+//     text-decoration: none;
+//     transition: color 0.1s linear;
+//     &:hover {
+//       background: rgba(0,0,0,0.2);
+//       color: white;
+//       transition: all 0.15s linear;
+//     }
+//   }
+// }
 
-div.list div.item {
-  border-left: green;
-  border-left-width: thick;
-  border-left-style: solid;
-}
+// #body {
+//   background-color: #ffffff
+// }
 
-#masthead {
-  margin-bottom: 2.5em;
-  background-image: url("https://design.oaklandca.gov/0/img/hero-1.jpg");
-}
+// .welcome {
+//   -webkit-animation-name: welcome;
+//   -webkit-animation-duration: .9s;
+// }
 
-#footer {
-  background-color: #cfd0ce;
-}
+// @-webkit-keyframes welcome {
+//   from {
+//     -webkit-transform: scale(0);
+//     opacity: 0;
+//   }
+//   50% {
+//    -webkit-transform: scale(0);
+//    opacity: 0;
+//   }
+//   82.5% {
+//     -webkit-transform: scale(1.03);
+//     -webkit-animation-timing-function: ease-out;
+//     opacity: 1;
+//   }
+//   to {
+//     -webkit-transform: scale(1);
+//   }
+// }
 
-#masthead::after {
-  content: "";
+// #menu {
+//   height: 150px;
+//   background-color: #f4f5f4;
+//   margin: 0;
+// }
 
-  opacity: 0.8;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-}
+// .hidden.menu {
+//   display: none;
+// }
+
+// .masthead.segment {
+//   min-height: 25rem;
+//   padding: 1em 0em;
+// }
+// .masthead .logo.item img {
+//   margin-right: 1em;
+// }
+// .masthead .ui.menu .ui.button {
+//   margin-left: 0.5em;
+// }
+// .masthead h1.ui.header {
+//   margin-top: 3em;
+//   margin-bottom: 0em;
+//   font-size: 4em;
+//   font-weight: normal;
+// }
+// .masthead h2 {
+//   font-size: 1.7em;
+//   font-weight: normal;
+// }
+
+// .ui.vertical.stripe {
+//   padding: 8em 0em;
+// }
+// .ui.vertical.stripe h3 {
+//   font-size: 2em;
+// }
+// .ui.vertical.stripe .button + h3,
+// .ui.vertical.stripe p + h3 {
+//   margin-top: 3em;
+// }
+// .ui.vertical.stripe .floated.image {
+//   clear: both;
+// }
+// .ui.vertical.stripe p {
+//   font-size: 1.33em;
+// }
+// .ui.vertical.stripe .horizontal.divider {
+//   margin: 3em 0em;
+// }
+
+// .quote.stripe.segment {
+//   padding: 0em;
+// }
+// .quote.stripe.segment .grid .column {
+//   padding-top: 5em;
+//   padding-bottom: 5em;
+// }
+
+// .footer.segment {
+//   padding: 5em 0em;
+// }
+
+// .secondary.pointing.menu .toc.item {
+//   display: none;
+// }
+
+// @media only screen and (max-width: 700px) {
+//   .ui.fixed.menu {
+//     display: none !important;
+//   }
+//   .secondary.pointing.menu .item,
+//   .secondary.pointing.menu .menu {
+//     display: none;
+//   }
+//   .secondary.pointing.menu .toc.item {
+//     display: block;
+//   }
+//   .masthead.segment {
+//     min-height: 350px;
+//   }
+//   .masthead h1.ui.header {
+//     font-size: 2em;
+//     margin-top: 1.5em;
+//   }
+//   .masthead h2 {
+//     margin-top: 0.5em;
+//     font-size: 1.5em;
+//   }
+// }
+
+// .ui.left.sidebar, .ui.right.sidebar {
+//   width: 500px;
+// }
+
+// .ui.selection.list .list>.item, .ui.selection.list>.item {
+//   border-radius: 0;
+//   margin-bottom: 1rem;
+// }
+
+// .ui.button {
+//   border-radius: 0;
+// }
+
+// div.list div.item {
+//   border-left: green;
+//   border-left-width: thick;
+//   border-left-style: solid;
+// }
+
+// #masthead {
+//   margin-bottom: 2.5em;
+//   background-image: url("https://design.oaklandca.gov/0/img/hero-1.jpg");
+// }
+
+// #footer {
+//   background-color: #cfd0ce;
+// }
+
+// #masthead::after {
+//   content: "";
+
+//   opacity: 0.8;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   position: absolute;
+//   z-index: -1;   
+// }
+
+

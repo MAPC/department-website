@@ -1,12 +1,17 @@
-.ui.container.section
-  .grid-row
-    - @tools.each do |tool|
-      .post-excerpt.one-third
-        %img{:alt => "", :src => tool.screenshot.url(:thumbnail)} 
-          %p.post-data
-            %a{:href => "#"} Category
-            \-
-            %time{:datetime => ""} September 9, 2015
-          %h3
-            %a{:href => "#"} 
-              = tool.title
+%main.transportation
+  .main-overlay
+  .container
+    %nav.breadcrumbs
+      = render_breadcrumbs
+      %span Tools
+  %section.container
+    .grid-row
+      - @tools.each do |tool|
+        .post-excerpt.one-third
+          %img{:alt => "", :src => tool.screenshot.url(:thumbnail)} 
+            %p.post-data
+              %a{:href => "#"} Category
+              \-
+              %time{:datetime => ""} September 9, 2015
+            %h3
+              = link_to(tool.title, tool)

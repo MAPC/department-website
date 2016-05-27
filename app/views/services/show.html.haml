@@ -3,16 +3,18 @@
     .breadcrumb-wrap
       %nav.breadcrumbs
         = render_breadcrumbs
-    / .breadcrumb-wrap
+        %span 
+          = @service.title
     .container
       .grid-row
         .section-info.two-thirds.column-shift
           %h1 
             = @service.group.title
-          %p There is a purpose for our play, play is more than physical activity and bouncing balls. Play produces great outcomes.
+          %p 
+            = @service.group.tagline
         %nav.section-menu.one-fourth
           - @service.group.services.each do |service|
-            = link_to(service.title, service, class: "menu-item")
+            = link_to(service.title, service, class: "menu-item-plain")
       / .grid-row
     / .container
 
