@@ -11,9 +11,9 @@ class ProjectDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     body: Field::Text,
-    screenshot: Field::String,
     icon: Field::String,
     url: Field::String,
+    preview: PaperclipField
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -25,7 +25,6 @@ class ProjectDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :body,
-    :screenshot,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -34,9 +33,9 @@ class ProjectDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :body,
-    :screenshot,
     :icon,
     :url,
+    :preview
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -45,9 +44,9 @@ class ProjectDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :title,
     :body,
-    :screenshot,
     :icon,
     :url,
+    :preview
   ].freeze
 
   # Overwrite this method to customize how projects are displayed

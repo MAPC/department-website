@@ -2,10 +2,7 @@
   %section.subheader
     .breadcrumb-wrap
       %nav.breadcrumbs
-        %a{:href => "#"} Home
-        %a{:href => "#"} Breadcrumb
-        %a{:href => "#"} Page level 1
-        %span Current Page Title
+        = render_breadcrumbs
     / .breadcrumb-wrap
     .container
       .grid-row

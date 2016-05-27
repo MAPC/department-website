@@ -33,7 +33,11 @@ gem 'administrate'
 gem 'haml-rails'
 
 gem 'redcarpet'
+gem 'breadcrumbs_on_rails'
 
+gem 'paperclip', github: 'thoughtbot/paperclip'
+
+gem 'aws-sdk', '>= 2.0.34'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

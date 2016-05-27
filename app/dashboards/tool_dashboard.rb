@@ -13,6 +13,7 @@ class ToolDashboard < Administrate::BaseDashboard
     screenshot: Field::String,
     url: Field::String,
     body: Field::Text,
+    screenshot: PaperclipField
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -34,7 +35,7 @@ class ToolDashboard < Administrate::BaseDashboard
     :title,
     :screenshot,
     :url,
-    :body,
+    :body
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -44,7 +45,7 @@ class ToolDashboard < Administrate::BaseDashboard
     :title,
     :screenshot,
     :url,
-    :body,
+    :body
   ].freeze
 
   # Overwrite this method to customize how tools are displayed
