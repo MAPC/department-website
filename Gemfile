@@ -36,6 +36,8 @@ gem 'breadcrumbs_on_rails'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'aws-sdk', '>= 2.0.34'
+gem 'foreman'
+gem 'dotenv-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
