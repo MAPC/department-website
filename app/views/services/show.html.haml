@@ -11,12 +11,10 @@
           %h1 
             = @service.group.title
           %p 
-            = @service.group.tagline
+            = @service.group.desc
         %nav.section-menu.one-fourth
           - @service.group.services.each do |service|
             = link_to(service.title, service, class: "menu-item-plain")
-      / .grid-row
-    / .container
 
 %section.container
   %h1

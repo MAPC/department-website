@@ -9,6 +9,7 @@ class GroupDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    position: Field::Number,
     title: Field::String,
     desc: Field::Text,
     tagline: Field::String,
@@ -26,6 +27,7 @@ class GroupDashboard < Administrate::BaseDashboard
     :title,
     :desc,
     :tagline,
+    :position
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,6 +37,7 @@ class GroupDashboard < Administrate::BaseDashboard
     :title,
     :desc,
     :tagline,
+    :position,
     :created_at,
     :updated_at,
   ].freeze
@@ -46,6 +49,7 @@ class GroupDashboard < Administrate::BaseDashboard
     :title,
     :desc,
     :tagline,
+    :position
   ].freeze
 
   # Overwrite this method to customize how groups are displayed
