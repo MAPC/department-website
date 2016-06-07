@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require jquery.waypoints.min
 //= require anchor.min
+//= require moment.min.js
+//= require medium.js
 //= require oakland
