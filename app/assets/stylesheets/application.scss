@@ -16,8 +16,12 @@
  @import "primer";
 
 .site-logo {
-  width: 150px;
-  height: 80px;
+  width: 130px;
+  height: 60px;
+}
+
+.section-info {
+  color: #ffffff;
 }
 
 .menu-item-plain {
@@ -28,6 +32,9 @@
   background-color: #4A148C;
 }
 
+a {
+  color: #34495e;
+}
 // @charset "utf-8";
 // @import "oakland/normalize";
 

@@ -5,7 +5,7 @@
 /     %a{:href => "#"} Read more
 
 
-%section.subheader
+%section.subheader{:style => "background-image: url(https://files.slack.com/files-pri/T031NFK37-F1DMG695J/pexels-photo-30732.jpg)"}
   .container
     .grid-row
       .section-info.two-thirds
@@ -16,7 +16,7 @@
         %a.menu-item{:href => "#section-2"} Our Work
         %a.menu-item{:href => "#section-3"} News
         =link_to("Tools", tools_path, class: "menu-item-plain")
-        %a.menu-item{:href => "#section-4"} Data
+        =link_to("Data", datasets_path, class: "menu-item-plain")
 .main-overlay
 %section#section-1.section
   .container
@@ -54,44 +54,46 @@
 
 %section#section-3.section  
   .container
+  .container
     %h2
       News
     .grid-row
-      .two-thirds
+      .two-thirds#feed
         %h2 City News
-        .post-excerpt
-          %p.post-data
-            %a{:href => "#"} Category
-            \-
-            %time{:datetime => ""} September 9, 2015
-          %h3
-            %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
-          %p The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.
-        .post-excerpt
-          %p.post-data
-            %a{:href => "#"} Category
-            \-
-            %time{:datetime => ""} September 9, 2015
-          %h3
-            %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
-        .post-excerpt
-          %p.post-data
-            %a{:href => "#"} Category
-            \-
-            %time{:datetime => ""} September 9, 2015
-          %h3
-            %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
-          %p The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.
+        / .post-excerpt
+        /   %p.post-data
+        /     %a{:href => "#"} Category
+        /     \-
+        /     %time{:datetime => ""} September 9, 2015
+        /   %h3
+        /     %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
+        /   %p The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.
+        / .post-excerpt
+        /   %p.post-data
+        /     %a{:href => "#"} Category
+        /     \-
+        /     %time{:datetime => ""} September 9, 2015
+        /   %h3
+        /     %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
+        / .post-excerpt
+        /   %p.post-data
+        /     %a{:href => "#"} Category
+        /     \-
+        /     %time{:datetime => ""} September 9, 2015
+        /   %h3
+        /     %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
+        /   %p The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.
       %aside.one-third
         %h4.aside-title Other News
-        %ul.list-no-style
-          %li
-            %a{:href => ""} Some other News about Oakland
-          %li
-            %a{:href => ""} Some other News about Oakland with a longer title
-          %li
-            %a{:href => ""} Some other News about Oakland
-          %li
-            %a{:href => ""} Some other News about Oakland with a really really really really really long title
-          %li
-            %a{:href => ""} Some other News about Oakland
+        %ul.list-no-style#feed-aside
+          
+          / %li
+          /   %a{:href => ""} Some other News about Oakland
+          / %li
+          /   %a{:href => ""} Some other News about Oakland with a longer title
+          / %li
+          /   %a{:href => ""} Some other News about Oakland
+          / %li
+          /   %a{:href => ""} Some other News about Oakland with a really really really really really long title
+          / %li
+          /   %a{:href => ""} Some other News about Oakland

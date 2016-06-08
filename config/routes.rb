@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     resources :projects
     resources :services
     resources :tools
-
+    resources :staffs
+    resources :datasets
     root to: "groups#index"
   end
 
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
   resources :services
   resources :tools
   resources :groups
+  resources :datasets
+  resources :blogfeed
 
   root to: "welcome#index"
   # The priority is based upon order of creation: first created -> highest priority.
