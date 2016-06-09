@@ -35,7 +35,6 @@
                 = link_to(service, class: "one-third") do
                   = service.title
 
-
 %section#section-2.section
   .container
     = link_to(projects_path) do
@@ -54,46 +53,13 @@
 
 %section#section-3.section  
   .container
-  .container
     %h2
       News
     .grid-row
       .two-thirds#feed
         %h2 City News
-        / .post-excerpt
-        /   %p.post-data
-        /     %a{:href => "#"} Category
-        /     \-
-        /     %time{:datetime => ""} September 9, 2015
-        /   %h3
-        /     %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
-        /   %p The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.
-        / .post-excerpt
-        /   %p.post-data
-        /     %a{:href => "#"} Category
-        /     \-
-        /     %time{:datetime => ""} September 9, 2015
-        /   %h3
-        /     %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
-        / .post-excerpt
-        /   %p.post-data
-        /     %a{:href => "#"} Category
-        /     \-
-        /     %time{:datetime => ""} September 9, 2015
-        /   %h3
-        /     %a{:href => "#"} City of Oakland Kicks off "Plan Downtown"
-        /   %p The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.
+        #loadingDiv
+          %img{:src=> "http://preloaders.net/preloaders/712/Floating%20rays.gif"}
       %aside.one-third
         %h4.aside-title Other News
         %ul.list-no-style#feed-aside
-          
-          / %li
-          /   %a{:href => ""} Some other News about Oakland
-          / %li
-          /   %a{:href => ""} Some other News about Oakland with a longer title
-          / %li
-          /   %a{:href => ""} Some other News about Oakland
-          / %li
-          /   %a{:href => ""} Some other News about Oakland with a really really really really really long title
-          / %li
-          /   %a{:href => ""} Some other News about Oakland

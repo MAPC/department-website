@@ -13,6 +13,7 @@ class ToolDashboard < Administrate::BaseDashboard
     screenshot: Field::String,
     url: Field::String,
     body: Field::Text,
+    tagline: Field::String,
     screenshot: PaperclipField
   }.freeze
 
@@ -45,6 +46,7 @@ class ToolDashboard < Administrate::BaseDashboard
     :title,
     :screenshot,
     :url,
+    :tagline,
     :body
   ].freeze
 
