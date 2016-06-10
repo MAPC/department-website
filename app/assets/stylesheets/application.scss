@@ -14,13 +14,12 @@
  */
 
 @import "primer";
-@import "maki-min";
 @import "semantic-ui/collections/grid";
 @import "semantic-ui/elements/header";
 @import "semantic-ui/views/card";
 @import "semantic-ui/elements/icon";
 @import "semantic-ui/elements/button";
-
+@import "maki-min";
 // MAPC Green: #C6E3B2
 // MAPC Blue: #004B8C
 
@@ -38,7 +37,7 @@
 }
 
 .subheader {
-  background-color: #4A148C;
+  background-color: #004B8C;
 }
 
 a {
@@ -90,7 +89,7 @@ a {
   right: 0;
   bottom:0;
   color: black;
-  opacity: 0.05;
+  opacity: 0.1;
   font-size: 1.75rem;
 }
 

@@ -51,7 +51,8 @@ class ProjectDashboard < Administrate::BaseDashboard
     :icon,
     :url,
     :tagline,
-    :preview
+    :preview,
+    :featured
   ].freeze
 
   # Overwrite this method to customize how projects are displayed
