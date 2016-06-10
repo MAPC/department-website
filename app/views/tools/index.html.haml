@@ -1,16 +1,29 @@
-%main.transportation
+%main.tools
   .main-overlay
-  .container
-    %nav.breadcrumbs
-      = render_breadcrumbs
-      %span Tools
-  %section.container
-    .ui.equal.width.grid
-      - @tools.each do |tool|
-        = link_to tool, class: "six wide column" do
-          .ui.icon.header
-            %i.write.icon
+  %section.subheader
+    .splash-icon
+      %i.cubes.huge.icon
+    .breadcrumb-wrap
+      %nav.breadcrumbs
+        = render_breadcrumbs
+        %span Data Tools
+    .container
+      .grid-row
+        .section-info.two-thirds
+          %h1 Data Tools
+          %p Browse our portfolio of data tools to help you in your work.
+  %section
+    .container
+      .ui.three.stackable.cards
+        - @tools.each do |tool|
+          = link_to tool, class: ["ui", tool.color, "card", "tool"] do
+            .card-splash-icon
+              %i{class: ["huge", "icon", tool.icon] }
             .content
-              = tool.title
-        / = tool.tagline
-        / = link_to(tool.title, tool)
+              .header 
+                = tool.title
+              .meta
+
+              .description
+                %p
+                  = tool.tagline

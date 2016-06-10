@@ -1,17 +1,38 @@
-%main.transportation
+%main.projects
   .main-overlay
-  .container
-    %nav.breadcrumbs
-      = render_breadcrumbs
-      %span Our Work
-  %section.container
-    .grid-row
+  %section.subheader
+    .splash-icon
+      %i.map.huge.icon
+    .breadcrumb-wrap
+      %nav.breadcrumbs
+        = render_breadcrumbs
+        %span Our Work
+    .container
+      .grid-row
+        .section-info.two-thirds
+          %h1 Our Work
+          %p View our portfolio of planning projects.
+  %section
+    .container
       - @projects.each do |project|
-        .post-excerpt.one-third
-          %img{:alt => "", :src => project.preview.url(:thumbnail)} 
-            %p.post-data
-              %a{:href => "#"} Category
-              \-
-              %time{:datetime => ""} September 9, 2015
-            %h3
-              = link_to(project.title, project)
+        - if project.featured
+          .grid-row
+            .post-excerpt.two-thirds.right
+              %h2 Featured Project
+              - if project.preview
+                = link_to project do
+                  %img{:alt => "", :src => project.preview.url(:featured)}
+              %p.post-data
+              %h3
+                = link_to project.title, project
+              %p
+                = project.blurb
+      .grid-row
+        - @projects.each do |project|
+          - if not project.featured
+            .post-excerpt.one-third
+              = link_to project do
+                %img{:alt => "", :src => project.preview.url(:thumbnail)} 
+              %p.post-data
+              %h3
+                = link_to(project.title, project)

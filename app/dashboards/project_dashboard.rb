@@ -13,6 +13,8 @@ class ProjectDashboard < Administrate::BaseDashboard
     body: Field::Text,
     icon: Field::String,
     url: Field::String,
+    tagline: Field::String,
+    featured: Field::Boolean,
     preview: PaperclipField
   }.freeze
 
@@ -25,6 +27,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :body,
+    :featured
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,6 +38,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     :body,
     :icon,
     :url,
+    :featured,
     :preview
   ].freeze
 
@@ -46,6 +50,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     :body,
     :icon,
     :url,
+    :tagline,
     :preview
   ].freeze
 

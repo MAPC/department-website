@@ -14,6 +14,8 @@ class ToolDashboard < Administrate::BaseDashboard
     url: Field::String,
     body: Field::Text,
     tagline: Field::String,
+    color: Field::String,
+    icon: Field::String,
     screenshot: PaperclipField
   }.freeze
 
@@ -47,7 +49,9 @@ class ToolDashboard < Administrate::BaseDashboard
     :screenshot,
     :url,
     :tagline,
-    :body
+    :body,
+    :color,
+    :icon
   ].freeze
 
   # Overwrite this method to customize how tools are displayed
