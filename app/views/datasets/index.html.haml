@@ -1,0 +1,27 @@
+%main.tools
+  .main-overlay
+  %section.subheader
+    .splash-icon
+      %i.database.huge.icon
+    .breadcrumb-wrap
+      %nav.breadcrumbs
+        = render_breadcrumbs
+        %span Datasets
+    .container
+      .grid-row
+        .section-info.two-thirds
+          %h1 Datasets
+          %p View below to browse our portfolio of flagship datasets. This is not an exhausive list.
+  %section
+    .container
+      - @datasets.each do |dataset|
+        .ui.blue.attached.segment
+          %h2
+            = dataset.name
+          %p
+            = dataset.bio
+        = link_to dataset.download, class: " ui bottom attached positive button", target: "_blank" do 
+          Learn More
+        .ui.divider
+
+%br

@@ -19,6 +19,9 @@
 @import "semantic-ui/views/card";
 @import "semantic-ui/elements/icon";
 @import "semantic-ui/elements/button";
+@import "semantic-ui/elements/segment";
+@import "semantic-ui/elements/divider";
+@import "semantic-ui/elements/label";
 @import "maki-min";
 // MAPC Green: #C6E3B2
 // MAPC Blue: #004B8C
@@ -97,6 +100,14 @@ a {
   a:hover {
     text-decoration: none;
   } 
+}
+
+.navicon, .navicon:before, .navicon:after {
+  background: #004B8C;
+}
+
+.header-search .search-icon {
+  color: #004B8C;
 }
 
 .tools {

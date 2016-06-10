@@ -10,6 +10,7 @@ class DatasetDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
+    download: Field::String.with_options(title: "Download Link"),
     bio: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -43,6 +44,7 @@ class DatasetDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :bio,
+    :download,
   ].freeze
 
   # Overwrite this method to customize how datasets are displayed

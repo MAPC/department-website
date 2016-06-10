@@ -3,6 +3,8 @@
     .breadcrumb-wrap
       %nav.breadcrumbs
         = render_breadcrumbs(separator: "")
+        %span 
+          = @project.title
 
   %section.container
     %h1
