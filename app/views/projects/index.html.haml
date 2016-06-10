@@ -9,10 +9,19 @@
         %span Our Work
     .container
       .grid-row
-        .section-info.two-thirds
+        .section-info.two-thirds.column-shift
           %h1 Our Work
           %p View our portfolio of planning projects.
-  %section
+        %nav.section-menu.one-fourth
+          %a.menu-item{href: "#featured"}
+            Featured
+          %a.menu-item{href: "#all"}
+            All Projects
+          %a.menu-item{href: "#tools"}
+            Tools
+          %a.menu-item{href: "#collaborate"}
+            Work with us
+  %section#featured.section
     .container
       - @projects.each do |project|
         - if project.featured
@@ -27,7 +36,11 @@
                 = link_to project.title, project
               %p
                 = project.blurb
-      .grid-row
+  %section#all.section
+    .container
+      %h2
+        All Projects
+      .grid-row#all
         - @projects.each do |project|
           - if not project.featured
             .post-excerpt.one-third
@@ -36,3 +49,27 @@
               %p.post-data
               %h3
                 = link_to(project.title, project)
+  %section#tools.section
+    .container
+      %h2
+        =link_to "Tools", tools_path
+      .grid-row#all
+        .ui.three.stackable.cards
+          - @tools.each do |tool|
+            = link_to tool, class: ["ui", tool.color, "card", "tool"] do
+              .card-splash-icon
+                %i{class: ["huge", "icon", tool.icon] }
+              .content
+                .header 
+                  = tool.title
+                .meta
+                .description
+                  %p
+                    = tool.tagline
+  %section#collaborate.section
+    .container
+      %h2
+        Work With Us
+      %p
+        Have a project idea? Contact us.
+

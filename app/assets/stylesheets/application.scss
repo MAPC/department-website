@@ -93,6 +93,12 @@ a {
   font-size: 1.75rem;
 }
 
+.cards {
+  a:hover {
+    text-decoration: none;
+  } 
+}
+
 .tools {
   .subheader {
     background-color: #004B8C;
@@ -107,11 +113,6 @@ a {
     min-height: 200px;
   }
 
-  .cards {
-    a:hover {
-      text-decoration: none;
-    } 
-  }
 }
 
 .projects {
