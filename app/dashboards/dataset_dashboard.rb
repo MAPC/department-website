@@ -10,7 +10,7 @@ class DatasetDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
-    download: Field::String.with_options(title: "Download Link"),
+    download: Field::String,
     bio: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
