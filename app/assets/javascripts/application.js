@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.waypoints.min
-//= require turbolinks
 //= require anchor.min
 //= require moment.min.js
 //= require medium.js
