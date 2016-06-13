@@ -16,6 +16,7 @@ class ToolDashboard < Administrate::BaseDashboard
     tagline: Field::String,
     color: Field::String,
     icon: Field::String,
+    position: Field::Number,
     screenshot: PaperclipField
   }.freeze
 
@@ -50,6 +51,7 @@ class ToolDashboard < Administrate::BaseDashboard
     :url,
     :tagline,
     :body,
+    :position,
     :color,
     :icon
   ].freeze
