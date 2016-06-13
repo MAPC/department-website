@@ -43,13 +43,11 @@
     .grid-row
       - @projects.each do |project|
         .post-excerpt.one-third
-          %img{:alt => "", :src => project.preview.url(:thumbnail)} 
-            %p.post-data
-              %a{:href => "#"} Category
-              \-
-              %time{:datetime => ""} September 9, 2015
-            %h3
-              = link_to(project.title, project)
+          = link_to project do
+            %img{:alt => "", :src => project.preview.url(:thumbnail)} 
+          %p.post-data
+          %h3
+            = link_to(project.title, project)
 
 %section#section-3.section  
   .container

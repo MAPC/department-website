@@ -3,51 +3,47 @@
     %h4 Get In Touch
     .grid-row
       .one-fourth
-        %strong Call 3-1-1 from within the City
+        E-mail: 
+        %a{href: 'mailto:data@mapc.org'}
+          data@mapc.org
         %br
-          TTY service is also available by dialing (212) 504-4115.
+        Phone: (617) 933-0700
+        %br
+        Fax: (617) 482-7185
       .one-fourth.column-shift
-        %strong Contact Mayor Libby Schaaf
+        %strong 
+          = link_to("View our staff directory", staffs_path) 
         %br
-          You may contact Mayor Libby Schaaf by postal mail, phone, or submitting an online message.
+          You may our team by e-mail or phone. 
       .one-fourth.column-shift
         %strong Provide Feedback
         %br
-          OaklandCA.gov invites you to leave your comments about our Web site.
+          We invite you to leave comments about our Web site.
     %hr
-      %h4 Oakland Government
+      %h4 Our Funders
+      .grid-row
+        %img{src: '/img/BIP_2015_white.png', class: "funder-logo"}
+        %img{src: '/img/boston-foundation-white.png', class: "funder-logo"}
+        %img{src: '/img/living_cities.png', class: "funder-logo"}
+        %img{src: '/img/Knight-Foundation.png', class: "funder-logo"}
+    %hr
+      %h4 Data Services
       .grid-row
         %ul.footer-links.list-no-style.one-third
           %li
-            %a{:href => ""} Animal Services
+            = link_to("Our Work", projects_path)
           %li
-            %a{:href => ""} City Clerk
-          %li
-            %a{:href => ""} Community &amp; Economic Development
-          %li
-            %a{:href => ""} Finance
-          %li
-            %a{:href => ""} Fire Department
+            = link_to("Services Directory", "#section-1")
         %ul.footer-links.list-no-style.one-third
           %li
-            %a{:href => ""} Housing &amp; Community Development
+            = link_to("Flagship Datasets", datasets_path)
           %li
-            %a{:href => ""} Human resources Management
-          %li
-            %a{:href => ""} Human Services
-          %li
-            %a{:href => ""} Information Technology
-          %li
-            %a{:href => ""} Parks &amp; Recreation
+            = link_to("Staff Directory", staffs_path)
         %ul.footer-links.list-no-style.one-third
           %li
-            %a{:href => ""} Planning &amp; Building
+            = link_to("Data Tools", tools_path)
           %li
-            %a{:href => ""} Police Department
-          %li
-            %a{:href => ""} Public Library
-          %li
-            %a{:href => ""} Public Works
+            %a{:href => "http://medium.com/dataservicesblog"} Department Blog
       %hr
         .footer-omega
           .one-third.right.column-last

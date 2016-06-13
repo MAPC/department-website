@@ -14,8 +14,8 @@ if ( $( "#loadingDiv" ).length ) {
       }
       var content = entry.summary;
       var adjustedContent = content.replace("Continue reading on Medium", "Read Story").replace(/<\/?img[^>]*>/g,"");
-      var blogPost = "<p class='post-data'><time>" + date + "</time></p><div class='post-excerpt'><h3><a href='" + entry.url + "'>" + trimmedTitle + "</a></h3>" + adjustedContent + "<hr /></div>";
-      var asideLi = "<li><a href='" + entry.url + "'>" + trimmedTitle + "</a></li>"
+      var blogPost = "<p class='post-data'><time>" + date + "</time></p><div class='post-excerpt'><h3><a href='" + entry.url + "' target='_blank'>" + trimmedTitle + "</a></h3>" + adjustedContent + "<hr /></div>";
+      var asideLi = "<li><a href='" + entry.url + "' target='_blank'>" + trimmedTitle + "</a></li>"
       if (i < 3) {
         $('#feed').append(blogPost);  
       } else {
