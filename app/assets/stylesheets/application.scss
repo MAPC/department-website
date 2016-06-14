@@ -30,7 +30,7 @@
 // MAPC Blue: #004B8C
 
 .site-logo {
-  width: 50%;
+  width: 75%;
   height: auto;
 }
 
@@ -92,8 +92,11 @@ a {
   background-color: #004B8C;
 }
 
-.splash-icon {
+.site-logo-wrap {
+  padding-top: 0.35rem;
+}
 
+.splash-icon {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   position: absolute;
   // right: 0;
