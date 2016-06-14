@@ -8,10 +8,11 @@
       Data Services
     = csrf_meta_tags
     %link{:href => "//cdn.linearicons.com/free/1.0.0/icon-font.min.css", :rel => "stylesheet"}
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false
+    = javascript_include_tag 'application', 'data-turbolinks-track' => false
 
   %body
     = render "shared/header"  
     = yield
     = render "shared/footer"
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  

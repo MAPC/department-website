@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_self
+ *= require 'leaflet'
  */
 
 @import "primer";
@@ -24,12 +25,13 @@
 @import "semantic-ui/elements/label";
 @import "semantic-ui/elements/image";
 @import "maki-min";
+
 // MAPC Green: #C6E3B2
 // MAPC Blue: #004B8C
 
 .site-logo {
-  width: 130px;
-  height: 60px;
+  width: 50%;
+  height: auto;
 }
 
 .section-info {
@@ -40,13 +42,31 @@
   @extend .menu-item;
 }
 
+.reset-position {
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+
 .subheader {
   background-color: #004B8C;
+}
+
+.subheader.welcome {
+  padding-bottom: 0;
 }
 
 a {
   color: #34495e;
 } 
+
+#map {
+  height: 25rem;
+}
+
+.leaflet-control-container {
+  display: none;
+}
 
 .page-header:after {
   background-color: #004B8C;

@@ -17,3 +17,4 @@
 //= require moment.min.js
 //= require medium.js
 //= require oakland
+//= require leaflet

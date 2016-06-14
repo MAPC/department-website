@@ -5,19 +5,30 @@
 /     %a{:href => "#"} Read more
 
 
-%section.subheader{:style => "background-image: url(/img/splash.jpg)"}
-  .container
-    .grid-row
-      .section-info.two-thirds
-        %h1 Welcome to Data Services
-        %p Using data and technology to drive informed decisionmaking across the region
-      %nav.section-menu.one-third
-        %a.menu-item{:href => "#section-1"} Services
-        %a.menu-item{:href => "#section-2"} Our Work
-        %a.menu-item{:href => "#section-3"} News
-        =link_to("Tools", tools_path, class: "menu-item-plain")
-        =link_to("Data", datasets_path, class: "menu-item-plain")
-        =link_to("About", about_path, class: "menu-item-plain")
+%section.subheader.welcome
+  #map
+  :javascript
+    var map = L.map('map', { scrollWheelZoom: false });
+    map.setView([42.331096, -71.376930], 11);
+    L.tileLayer('https://api.mapbox.com/styles/v1/mgardner/ciperahix0024b7nf26hl4abr/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWdhcmRuZXIiLCJhIjoiY2lwZWtnejEwMDAxNnRzbmw3dXExOTdjbiJ9.n35D_OrXIO-ZIXB0JCTSbA', {
+      attribution: 'MapBox',
+      maxZoom: 18,
+      subdomains: ''
+    }).addTo(map);
+
+  .reset-position
+    .container
+      .grid-row
+        .section-info.two-thirds
+          %h1 Welcome to Data Services
+          %p Using data and technology to drive informed decisionmaking across the region
+        %nav.section-menu.one-third
+          %a.menu-item{:href => "#section-1"} Services
+          %a.menu-item{:href => "#section-2"} Our Work
+          %a.menu-item{:href => "#section-3"} News
+          =link_to("Tools", tools_path, class: "menu-item-plain")
+          =link_to("Data", datasets_path, class: "menu-item-plain")
+          =link_to("About", about_path, class: "menu-item-plain")
 .main-overlay
 %section#section-1.section
   .container
