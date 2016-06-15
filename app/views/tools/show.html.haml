@@ -23,5 +23,15 @@
               %button.ui.fluid.button.positive
                 Use This Tool
                 %span.lnr.lnr-arrow-right
+            %br
+            - unless @tool.screenshot == ""
+              .ui.card
+                .image
+                  .ui.black.ribbon.label
+                    Screenshot
+                  %img{src: @tool.screenshot.url }
+
+                
+
         .two-thirds.column-shift
           = markdown @tool.body
