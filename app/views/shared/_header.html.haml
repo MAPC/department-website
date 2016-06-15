@@ -28,19 +28,23 @@
           %strong Data Services
         %ul.nav-sub-menu.nav-menu
           %li
-            %a.menu-item{:href => ""} Get Involved
+            = link_to("Our Work", projects_path, class: "menu-item")
           %li
-            %a.menu-item{:href => ""} Departments
+            = link_to("Services Directory", "/#section-1", class: "menu-item")
           %li
-            %a.menu-item{:href => ""} Announcements
+            = link_to("Flagship Datasets", datasets_path, class: "menu-item")
+          %li
+            = link_to("Staff Directory", about_path, class: "menu-item")
+          %li
+            = link_to("Data Tools", tools_path, class: "menu-item")
+          %li
+            = link_to("Flagship Datasets", datasets_path, class: "menu-item")
+          %li
+            %a{:href => "http://medium.com/dataservicesblog", target: "_blank", class: "menu-item"} Department Blog
     %ul.top-level-menu.nav-menu
       %li
         %a.menu-item.sub-menu-toggle{:href => "#"}
           %strong General
         %ul.nav-sub-menu.nav-menu
           %li
-            %a.menu-item{:href => ""} Get Involved
-          %li
-            %a.menu-item{:href => ""} Departments
-          %li
-            %a.menu-item{:href => ""} Announcements
+            %a.menu-item{:href => "mailto:data@mapc.org"} E-mail Us
