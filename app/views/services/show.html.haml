@@ -1,4 +1,4 @@
-%main
+%main.service
   %section.subheader
     .breadcrumb-wrap
       %nav.breadcrumbs
@@ -7,22 +7,28 @@
           = @service.title
     .container
       .grid-row
-        .section-info.two-thirds.column-shift
+        .section-info.two-thirds
           %h1 
-            = @service.group.title
+            = @service.title
           %p 
-            = markdown @service.group.desc
-        %nav.section-menu.one-fourth
-          - @service.group.services.each do |service|
-            = link_to(service.title, service, class: "menu-item-plain")
+            = markdown @service.group.tagline
+
+  %div.content-footer.pager-footer
+    .previous-next-links
+      = link_to(@service.group, class: "next-link") do
+        .container
+          .pull-right
+            %span.prev-next-text See other #{@service.group.title} Services
+            %span.lnr.lnr-arrow-right
+            %br
 
 %section.container
-  %h1
-    = @service.title
   .grid-row
     %aside.one-fourth
-      %button.btn
-        E-mail Us
-        %span.lnr.lnr-arrow-right
+      = link_to "mailto:data@mapc.org" do
+        %button.ui.fluid.button.positive
+          Work with us
+          %span.lnr.lnr-arrow-right
     .two-thirds.column-shift
       = markdown @service.desc
+
