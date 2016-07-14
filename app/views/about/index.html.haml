@@ -2,7 +2,7 @@
   .main-overlay
   %section.subheader
     .splash-icon
-      %i.users.huge.icon
+      %i.users.huge.icon.bio-popup{'data-html': 'test'}
     .breadcrumb-wrap
       %nav.breadcrumbs
         = render_breadcrumbs
@@ -23,7 +23,7 @@
           = key
         .ui.four.stackable.cards
           - @staff[key].each do |staff|
-            .card
+            .ui.card
               .image
                 %img{src: staff.avatar.url(:thumbnail), class: ""}
               .content

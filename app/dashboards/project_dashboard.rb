@@ -10,6 +10,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
+    position: Field::Number,
     body: Field::Text,
     icon: Field::String,
     url: Field::String,
@@ -26,6 +27,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
+    :position,
     :body,
     :featured
   ].freeze
@@ -47,6 +49,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :title,
+    :position,
     :body,
     :icon,
     :url,

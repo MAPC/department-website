@@ -243,6 +243,8 @@ $(document).ready(function() {
 		// -----------------------------------
 		var $bigMenuItem = $('.big-menu .menu-item');
 
+		$(".big-menu .menu-item .menu-group-link").click(function(e) { e.stopImmediatePropagation(); });
+
 		$bigMenuItem.on('click', function(e) {
 			e.preventDefault();
 			$(".big-menu .menu-item .big-menu-group a").click(function(e) { e.stopImmediatePropagation(); });
