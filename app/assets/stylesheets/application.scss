@@ -58,7 +58,7 @@
 
 a {
   color: #34495e;
-} 
+}
 
 #map {
   height: 25rem;
@@ -73,11 +73,11 @@ a {
 }
 
 .dept-title:before {
-  background-color: #004B8C; 
+  background-color: #004B8C;
 }
 
 .site-footer .logo-wrap:before {
-  background-color: #004B8C; 
+  background-color: #004B8C;
 }
 
 .ui.cards {
@@ -123,7 +123,7 @@ a {
 .cards {
   a:hover {
     text-decoration: none;
-  } 
+  }
 }
 
 .navicon, .navicon:before, .navicon:after {
@@ -134,8 +134,10 @@ a {
   color: #004B8C;
 }
 
-.funder-logo {
+img.funder-logo {
   max-width: 245px;
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
 }
 
 .tools {

@@ -7,10 +7,7 @@ class Project < ActiveRecord::Base
   scope :sort_featured, -> { order(featured: :desc) }
 
   def blurb
-    if tagline == ""
-      body.truncate_words(10)
-    else
-      tagline
-    end
+    # May implement conditionals later.
+    tagline
   end
 end

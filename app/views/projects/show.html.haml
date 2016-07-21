@@ -2,8 +2,8 @@
   %section.subheader{style: "background-image: url(#{@project.preview.url})"}
     .breadcrumb-wrap
       %nav.breadcrumbs
-        = render_breadcrumbs(separator: "")
-        %span 
+        = render_breadcrumbs(separator: '')
+        %span
           = @project.title
 
   %section.container
@@ -11,8 +11,8 @@
       = @project.title
     .grid-row
       %aside.one-fourth
-        %a{href: "mailto: contact@mapc.org"}
-          %button.ui.fluid.button.positive
+        %a{href: "mailto:contact@mapc.org"}
+          %button.ui.fluid.blue.button
             Contact Us
             %span.lnr.lnr-arrow-right
       .two-thirds.column-shift
