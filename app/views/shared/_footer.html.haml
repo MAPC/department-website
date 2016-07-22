@@ -1,20 +1,16 @@
-%footer.site-footer{:role => "contentinfo"}
+%footer.site-footer{role: 'contentinfo'}
   .container
     %h4 Get In Touch
     .grid-row
       .one-fourth
-        E-mail: 
-        %a{href: 'mailto:data@mapc.org'}
-          data@mapc.org
+        E-mail:
+        %a{href: 'mailto:data@mapc.org'} data@mapc.org
         %br
-        Phone: (617) 933-0700
-        %br
-        Fax: (617) 482-7185
+        %a{href: 'tel:6179330700'}
+          Phone: (617) 933-0700
       .one-fourth.column-shift
-        %strong 
-          = link_to("View our staff directory", staffs_path) 
-        %br
-          You may our team by e-mail or phone. 
+        %strong
+          = link_to 'View our staff directory', staffs_path
       .one-fourth.column-shift
         %strong Provide Feedback
         %br
@@ -22,11 +18,16 @@
     %hr
       %h4 Our Funders
       .grid-row
-        %img{src: '/img/BIP_2015_white.png', class: "funder-logo"}
-        %img{src: '/img/boston-foundation-white.png', class: "funder-logo"}
-        %img{src: '/img/living_cities.png', class: "funder-logo"}
-        %img{src: '/img/Knight-Foundation.png', class: "funder-logo"}
-        %img{src: '/img/barr_logo.jpg', class: "funder-logo"}
+        %a{href: 'http://bostonindicators.org'}
+          %img.funder-logo{src: '/img/BIP_2015_white.png'         }
+        %a{href: 'http://tbf.org'}
+          %img.funder-logo{src: '/img/boston-foundation-white.png'}
+        %a{href: 'http://livingcities.org'}
+          %img.funder-logo{src: '/img/living_cities.png'          }
+        %a{href: 'http://knightfoundation.org'}
+          %img.funder-logo{src: '/img/Knight-Foundation.png'      }
+        %a{href: 'http://barrfoundation.org'}
+          %img.funder-logo{src: '/img/barr_logo.jpg'              }
     %hr
       %h4 Data Services
       .grid-row
@@ -36,19 +37,18 @@
           %li
             = link_to("Services Directory", "/#section-1")
         %ul.footer-links.list-no-style.one-third
-          %li
-            = link_to("Flagship Datasets", datasets_path)
-          %li
-            = link_to("Staff Directory", about_path)
+          %li= link_to 'Flagship Datasets', datasets_path
+          %li= link_to 'Staff Directory', about_path
+
         %ul.footer-links.list-no-style.one-third
+          %li= link_to 'Data Tools', tools_path
           %li
-            = link_to("Data Tools", tools_path)
-          %li
-            %a{:href => "http://medium.com/dataservicesblog", target: "_blank"} Department Blog
+            %a{href: 'http://medium.com/dataservicesblog', target: '_blank'}
+              Department Blog
       %hr
         .footer-omega
           .one-third.right.column-last
-            %small &copy; 2016 Metropolitan Area Planning Council
-          %a.logo-wrap{:href => "#"}
-            %img.site-logo{:alt => "MAPC Data Services", :onerror => "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", :src => "/img/mapc-color.png"}/
+            %small &copy; #{ Time.current.year } Metropolitan Area Planning Council
+          %a.logo-wrap{href: '#'}
+            %img.site-logo{alt: 'MAPC Data Services', onerror: "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", src: '/img/mapc-color.png'}/
 %span.js-media-query-med

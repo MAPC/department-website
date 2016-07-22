@@ -13,10 +13,7 @@ class Project < ActiveRecord::Base
   end
 
   def blurb
-    if tagline == ""
-      body.truncate_words(10)
-    else
-      tagline
-    end
+    # May implement conditionals later.
+    tagline
   end
 end
