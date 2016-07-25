@@ -21,15 +21,18 @@
     .container
       .grid-row
         .section-info.two-thirds
-          %h1 Welcome to MAPC's Data Services Department
-          %p We use data and technology to drive informed decision-making across 101 cities and towns in the Metro Boston Area.
+          %h1 Welcome to Data Services
+          %p
+            We use data and technology to drive informed decision-making across
+            the Metro Boston region.
         %nav.section-menu.one-third
-          %a.menu-item{:href => "#section-1"} Services
-          =link_to("Work", projects_path, class: "menu-item-plain")
-          =link_to("Tools", tools_path, class: "menu-item-plain")
-          =link_to("Data", datasets_path, class: "menu-item-plain")
-          %a.menu-item{:href => "#section-3"} News
-          =link_to("About", about_path, class: "menu-item-plain")
+          = link_to 'Services', '#section-1', class: 'menu-item'
+          = link_to 'Our Work', '#section-2', class: 'menu-item'
+          = link_to 'Tools', tools_path,      class: 'menu-item-plain'
+
+          = link_to 'Data',  datasets_path,   class: 'menu-item-plain'
+          = link_to 'News',  '#section-3',    class: 'menu-item'
+          = link_to 'About', about_path,      class: 'menu-item-plain'
 .main-overlay
 %section#section-1.section
   .container
@@ -38,46 +41,45 @@
       %nav.big-menu
         - @groups.each do |group|
           .menu-item
-            %a{:href => "#"}
+            %a{href: "#"}
               %h3
                 = group.title
               %p
                 = group.tagline
-              %p 
+              %p
                 =link_to("Learn More »", group, class: "menu-group-link")
             .big-menu-group.grid-row
               - group.services.each do |service|
-                = link_to(service, class: "one-third") do
+                = link_to(service, class: 'one-third') do
                   = service.title
 
 %section#section-2.section
   .container
-    = link_to(projects_path) do
+    = link_to projects_path do
       %h2
         Work
     .grid-row
       - @projects.each do |project|
         .post-excerpt.one-third
           = link_to project do
-            %img{:alt => "", :src => project.preview.url(:thumbnail)} 
+            %img{alt: project.title, src: project.preview.url(:thumbnail)}
           %p.post-data
           %h3
-            = link_to(project.title, project)
+            = link_to project.title, project
 
       .post-excerpt.one-third
-        =link_to(projects_path) do
+        =link_to projects_path do
           %div.view-more-box
             View All »
-            
 
-%section#section-3.section{data: {"no-turbolink": true }}
+%section#section-3.section{ data: { 'no-turbolink': true } }
   .container
     %h2
       Blog Posts
     .grid-row
       .two-thirds#feed
         #loadingDiv
-          %img{:src=> "/img/loading.gif"}
+          %img{ src: '/img/loading.gif' }
       %aside.one-third
         %h4.aside-title More Posts
         %ul.list-no-style#feed-aside
