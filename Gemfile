@@ -43,6 +43,7 @@ gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'meta-tags'
 gem 'sitemap_generator'
 gem 'leaflet-rails'
+gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
