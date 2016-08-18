@@ -8,6 +8,9 @@ class Project < ActiveRecord::Base
 
   scope :sort_featured, -> { order(featured: :desc) }
 
+  has_one :tool
+  has_one :dataset
+
   def self.default_scope
     order(featured: :desc).order(position: :asc)
   end

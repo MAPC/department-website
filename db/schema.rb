@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712141702) do
+ActiveRecord::Schema.define(version: 20160818193557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20160712141702) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "download"
+    t.integer  "project_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -74,6 +75,7 @@ ActiveRecord::Schema.define(version: 20160712141702) do
     t.integer  "group_id"
     t.integer  "position"
     t.string   "role"
+    t.string   "email"
   end
 
   create_table "tools", force: :cascade do |t|
@@ -89,6 +91,7 @@ ActiveRecord::Schema.define(version: 20160712141702) do
     t.string   "color"
     t.string   "icon"
     t.integer  "position"
+    t.integer  "project_id"
   end
 
 end

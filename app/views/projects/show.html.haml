@@ -15,5 +15,17 @@
           %button.ui.fluid.button.positive
             Work with us
             %span.lnr.lnr-arrow-right
+        %br
+        %h4
+          Related
+        %ul
+          - if @project.dataset
+            %li
+              Dataset: 
+              = link_to "#{@project.dataset.name}", @project.dataset.download
+          - if @project.tool
+            %li
+              Tool: 
+              = link_to "Tool: #{@project.tool.title}", @project.tool 
       .two-thirds.column-shift
         = markdown @project.body

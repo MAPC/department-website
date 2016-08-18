@@ -5,4 +5,6 @@ class Tool < ActiveRecord::Base
   default_scope { order(:position) }
 
   alias_attribute :image, :screenshot
+
+  belongs_to :project
 end

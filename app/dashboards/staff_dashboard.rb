@@ -17,6 +17,7 @@ class StaffDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     group: Field::BelongsTo,
+    email: Field::String
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -48,6 +49,7 @@ class StaffDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :avatar,
+    :email,
     :bio,
     :position,
     :role,

@@ -3,12 +3,11 @@
     .container
       %header.page-header{role: 'banner'}
         .multi-logo-wrap
-          %a.site-logo-wrap{href: '/'}
+          %a.site-logo-wrap{href: 'http://mapc.org', target: '_blank'}
             %img.site-logo.logo-black{alt: 'MAPC Data Services', onerror: "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", src: "/img/mapc-color.png"}/
           %h1.dept-title
-            Data
-            %br
-            Services
+            %a{href: '/'}
+              Data Services
         .header-actions
           %a.header-nav-button.navicon-button.x{href: '#'}
             -# .navicon

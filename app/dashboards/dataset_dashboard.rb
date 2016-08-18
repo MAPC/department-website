@@ -12,6 +12,7 @@ class DatasetDashboard < Administrate::BaseDashboard
     name: Field::String,
     download: Field::String,
     bio: Field::Text,
+    project: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -45,6 +46,7 @@ class DatasetDashboard < Administrate::BaseDashboard
     :name,
     :bio,
     :download,
+    :project,
   ].freeze
 
   # Overwrite this method to customize how datasets are displayed

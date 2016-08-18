@@ -40,13 +40,13 @@
           = group
         .ui.four.stackable.cards
           - @staff[group].each do |staff|
-            .ui.card
+            .card{"data-html": "<div class='content'>#{staff.bio}</div>", "data-position": "top center", class: ("bio-popup" unless staff.bio.empty? )}
               .image
                 %img{src: staff.avatar.url(:thumbnail), class: ""}
               .content
                 = staff.name
                 .meta
-                  = staff.role
+                  = link_to staff.role, "mailto: #{staff.email}"
       .ui.horizontal.divider
       %h1 We're hiring!
       %p The Metropolitan Area Planning Council (MAPC) is a regional planning agency serving the people who live and work in the 101 cities and towns in Metropolitan Boston.
