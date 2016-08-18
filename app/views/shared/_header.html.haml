@@ -1,50 +1,51 @@
 .sticky-menu
   .header-wrap
     .container
-      %header.page-header{:role => "banner"}
+      %header.page-header{role: 'banner'}
         .multi-logo-wrap
-          %a.site-logo-wrap{:href => "/"}
-            %img.site-logo.logo-black{:alt => "MAPC Data Services", :onerror => "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", :src => "http://files.live.datacommon.org.s3.amazonaws.com/logos/images/large/mapc-color.png"}/
+          %a.site-logo-wrap{href: '/'}
+            %img.site-logo.logo-black{alt: 'MAPC Data Services', onerror: "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", src: "/img/mapc-color.png"}/
           %h1.dept-title
             Data
-            %br Services
+            %br
+            Services
         .header-actions
-          %form.header-search{:action => "", :method => "get", :role => "search"}
-            %label
-              %input{:placeholder => "How can we help?", :title => "Search for:", :type => "text"}
-            %span.lnr.lnr-magnifier.search-icon
-          %a.header-nav-button.navicon-button.x{:href => "#"}
-            .navicon
+          %a.header-nav-button.navicon-button.x{href: '#'}
+            -# .navicon
+
 .sticky-placeholder
 .global-navigation-wrap.clearfix
-  %nav.global-navigation{:role => "navigation"}
+  %nav.global-navigation{role: 'navigation'}
     .site-logo-wrap
-      %img.site-logo.logo-white{:alt => "MAPC Data Services", :src => "http://files.live.datacommon.org/assets/logos/mapc-white-83d5108ade4d5ea745b9cb6e46f164b8.png"}/
-      %a.header-nav-button.navicon-button.x.open{:href => "#"}
+      %img.site-logo.logo-white{alt: 'MAPC Data Services', src: '/img/mapc-white.png'}/
+      %a.header-nav-button.navicon-button.x.open{href: '#'}
         .navicon
-    %form.header-search.mobile-search{:action => "", :method => "get", :role => "search"}
+    %form.header-search.mobile-search{action: '', method: 'get', role: 'search'}
       %label
-        %input{:placeholder => "How can we help?", :title => "Search for:", :type => "text"}
+        %input{placeholder: 'How can we help?', title: 'Search for:', type: 'text'}
       %span.lnr.lnr-magnifier.search-icon
     %ul.top-level-menu.nav-menu
       %li
-        %a.menu-item.sub-menu-toggle{:href => "#"}
+        %a.menu-item.sub-menu-toggle{href: '#'}
           %strong Data Services
         %ul.nav-sub-menu.nav-menu
+          %li= link_to 'Our Work',           projects_path, class: 'menu-item'
+          %li= link_to 'Services Directory', "#section-1",  class: 'menu-item'
+          %li= link_to 'Flagship Datasets',  datasets_path, class: 'menu-item'
+          %li= link_to 'Staff Directory',    about_path,    class: 'menu-item'
+          %li= link_to 'Data Tools',         tools_path,    class: 'menu-item'
+          %li= link_to 'Flagship Datasets',  datasets_path, class: 'menu-item'
           %li
-            %a.menu-item{:href => ""} Get Involved
-          %li
-            %a.menu-item{:href => ""} Departments
-          %li
-            %a.menu-item{:href => ""} Announcements
+            %a{:href => "http://medium.com/dataservicesblog", target: "_blank", class: "menu-item"}
+              Department Blog
     %ul.top-level-menu.nav-menu
       %li
-        %a.menu-item.sub-menu-toggle{:href => "#"}
+        %a.menu-item.sub-menu-toggle{href: '#'}
           %strong General
         %ul.nav-sub-menu.nav-menu
           %li
-            %a.menu-item{:href => ""} Get Involved
+            %a.menu-item{href: ''} Get Involved
           %li
-            %a.menu-item{:href => ""} Departments
+            %a.menu-item{href: ''} Departments
           %li
-            %a.menu-item{:href => ""} Announcements
+            %a.menu-item{href: ''} Announcements

@@ -1,17 +1,75 @@
-%main.transportation
+%main.projects
   .main-overlay
-  .container
-    %nav.breadcrumbs
-      = render_breadcrumbs
-      %span Our Work
-  %section.container
-    .grid-row
+  %section.subheader
+    .splash-icon
+      %i.map.huge.icon
+    .breadcrumb-wrap
+      %nav.breadcrumbs
+        = render_breadcrumbs
+        %span Work
+    .container
+      .grid-row
+        .section-info.two-thirds.column-shift
+          %h1 Our Work
+          %p View our portfolio of planning projects.
+        %nav.section-menu.one-fourth
+          %a.menu-item{href: "#featured"}
+            Featured
+          %a.menu-item{href: "#all"}
+            All Projects
+          %a.menu-item{href: "#tools"}
+            Tools
+          %a.menu-item{href: "#collaborate"}
+            Work with us
+  %section#featured.section
+    .container
       - @projects.each do |project|
-        .post-excerpt.one-third
-          %img{:alt => "", :src => project.preview.url(:thumbnail)} 
-            %p.post-data
-              %a{:href => "#"} Category
-              \-
-              %time{:datetime => ""} September 9, 2015
-            %h3
-              = link_to(project.title, project)
+        - if project.featured
+          .grid-row
+            .post-excerpt.two-thirds.right
+              %h2 Featured Project
+              - if project.preview
+                = link_to project do
+                  %img{:alt => "", :src => project.preview.url(:featured)}
+              %p.post-data
+              %h3
+                = link_to project.title, project
+              %p
+                = project.blurb
+  %section#all.section
+    .container
+      %h2
+        All Projects
+      .grid-row#all
+        - @projects.each do |project|
+          - if not project.featured
+            .post-excerpt.one-third
+              = link_to project do
+                %img{:alt => "", :src => project.preview.url(:thumbnail)} 
+              %p.post-data
+              %h3
+                = link_to(project.title, project)
+  %section#tools.section
+    .container
+      %h2
+        =link_to "Tools", tools_path
+      .grid-row#all
+        .ui.three.stackable.cards
+          - @tools.each do |tool|
+            = link_to tool, class: ["ui", tool.color, "card", "tool"] do
+              .card-splash-icon
+                %i{class: ["huge", "icon", tool.icon] }
+              .content
+                .header 
+                  = tool.title
+                .meta
+                .description
+                  %p
+                    = tool.tagline
+  %section#collaborate.section
+    .container
+      %h2
+        Work With Us
+      %p
+        Have a project idea? Contact us.
+

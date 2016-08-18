@@ -1,8 +1,10 @@
-%main
+%main.tools
   %section.subheader
+    .splash-icon
+      %i{ class: [@tool.icon, "huge", "icon"]}
     .breadcrumb-wrap
       %nav.breadcrumbs
-        = render_breadcrumbs
+        = render_breadcrumbs(separator: "")
         %span 
           = @tool.title
     .container
@@ -10,6 +12,26 @@
         .section-info.two-thirds
           %h1
             = @tool.title
+          %p 
+            = @tool.tagline
   %section
     .container
-      = markdown @tool.body
+      .grid-row
+        - unless @tool.url == ""
+          %aside.one-fourth
+            = link_to @tool.url, target: "_blank" do
+              %button.ui.fluid.button.positive
+                Use This Tool
+                %span.lnr.lnr-arrow-right
+            %br
+            - unless @tool.screenshot == ""
+              .ui.card
+                .image
+                  .ui.black.ribbon.label
+                    Screenshot
+                  %img{src: @tool.screenshot.url }
+
+                
+
+        .two-thirds.column-shift
+          = markdown @tool.body

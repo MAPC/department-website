@@ -1,0 +1,23 @@
+%main.group
+  .main-overlay
+  %section.subheader
+    .breadcrumb-wrap
+      %nav.breadcrumbs
+        = render_breadcrumbs(separator: "")
+        %span
+          = link_to("Home", root_path)
+        %span 
+          = @group.title
+    .container
+      .grid-row
+        .section-info.two-thirds
+          %h1 
+            = @group.title
+          %p 
+            = markdown @group.desc
+  %section
+    .container
+      %h1 Services
+      - @group.services.each do |group_service|
+        %h2
+          = link_to(group_service.title, group_service)

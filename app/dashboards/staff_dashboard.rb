@@ -12,6 +12,8 @@ class StaffDashboard < Administrate::BaseDashboard
     name: Field::String,
     avatar: PaperclipField,
     bio: Field::Text,
+    position: Field::Number,
+    role: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     group: Field::BelongsTo,
@@ -47,6 +49,8 @@ class StaffDashboard < Administrate::BaseDashboard
     :name,
     :avatar,
     :bio,
+    :position,
+    :role,
     :group,
   ].freeze
 

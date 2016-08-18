@@ -1,62 +1,63 @@
-%footer.site-footer{:role => "contentinfo"}
+%footer.site-footer{role: 'contentinfo'}
   .container
     %h4 Get In Touch
     .grid-row
       .one-fourth
-        %strong Call 3-1-1 from within the City
+        E-mail:
+        %a{href: 'mailto:data@mapc.org'} data@mapc.org
         %br
-          TTY service is also available by dialing (212) 504-4115.
+        Phone:
+        %a{href: 'tel:6179330700'}
+          (617) 933-0700
       .one-fourth.column-shift
-        %strong Contact Mayor Libby Schaaf
-        %br
-          You may contact Mayor Libby Schaaf by postal mail, phone, or submitting an online message.
-      .one-fourth.column-shift
-        %strong Provide Feedback
-        %br
-          OaklandCA.gov invites you to leave your comments about our Web site.
+        %strong
+          = link_to 'Get to know us.', staffs_path
+      -# .one-fourth.column-shift
+      -#   %strong Provide Feedback
+      -#   %br
+      -#     We invite you to leave comments about our Web site.
     %hr
-      %h4 Oakland Government
+      %h4 Our Funders
       .grid-row
         %ul.footer-links.list-no-style.one-third
           %li
-            %a{:href => ""} Animal Services
+            %a{href: 'http://bostonindicators.org'}
+              %img.funder-logo{src: '/img/BIP_2015_white.png'         }
           %li
-            %a{:href => ""} City Clerk
-          %li
-            %a{:href => ""} Community &amp; Economic Development
-          %li
-            %a{:href => ""} Finance
-          %li
-            %a{:href => ""} Fire Department
+            %a{href: 'http://tbf.org'}
+              %img.funder-logo{src: '/img/boston-foundation-white.png'}
         %ul.footer-links.list-no-style.one-third
           %li
-            %a{:href => ""} Housing &amp; Community Development
+            %a{href: 'http://livingcities.org'}
+              %img.funder-logo{src: '/img/living_cities.png'          }
           %li
-            %a{:href => ""} Human resources Management
-          %li
-            %a{:href => ""} Human Services
-          %li
-            %a{:href => ""} Information Technology
-          %li
-            %a{:href => ""} Parks &amp; Recreation
+            %a{href: 'http://knightfoundation.org'}
+              %img.funder-logo{src: '/img/Knight-Foundation.png'      }
         %ul.footer-links.list-no-style.one-third
           %li
-            %a{:href => ""} Planning &amp; Building
+            %a{href: 'http://barrfoundation.org'}
+              %img.funder-logo{src: '/img/barr_logo.jpg'              }
+    %hr
+      %h4 Data Services
+      .grid-row
+        %ul.footer-links.list-no-style.one-third
           %li
-            %a{:href => ""} Police Department
+            = link_to("Our Work", projects_path)
           %li
-            %a{:href => ""} Public Library
+            = link_to("Services Directory", "/#section-1")
+        %ul.footer-links.list-no-style.one-third
+          %li= link_to 'Flagship Datasets', datasets_path
+          %li= link_to 'Staff Directory', about_path
+
+        %ul.footer-links.list-no-style.one-third
+          %li= link_to 'Data Tools', tools_path
           %li
-            %a{:href => ""} Public Works
+            %a{href: 'http://medium.com/dataservicesblog', target: '_blank'}
+              Department Blog
       %hr
         .footer-omega
           .one-third.right.column-last
-            %small &copy; 2015 City of Oakland
-            %br
-              %a{:href => "#"}
-                %small Privacy Policy
-              %a{:href => "#"}
-                %small Terms of Use
-          %a.logo-wrap{:href => "#"}
-            %img.site-logo{:alt => "MAPC Data Services", :onerror => "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", :src => "http://files.live.datacommon.org.s3.amazonaws.com/logos/images/large/mapc-color.png"}/
+            %small &copy; #{ Time.current.year } Metropolitan Area Planning Council
+          %a.logo-wrap{href: '#'}
+            %img.site-logo{alt: 'MAPC Data Services', onerror: "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", src: '/img/mapc-color.png'}/
 %span.js-media-query-med

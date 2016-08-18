@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160602203942) do
+ActiveRecord::Schema.define(version: 20160712141702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160602203942) do
     t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "download"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -44,6 +45,9 @@ ActiveRecord::Schema.define(version: 20160602203942) do
     t.string   "preview_content_type"
     t.integer  "preview_file_size"
     t.datetime "preview_updated_at"
+    t.boolean  "featured",             default: false
+    t.string   "tagline"
+    t.integer  "position"
   end
 
   create_table "services", force: :cascade do |t|
@@ -74,6 +78,8 @@ ActiveRecord::Schema.define(version: 20160602203942) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "group_id"
+    t.integer  "position"
+    t.string   "role"
   end
 
   create_table "tools", force: :cascade do |t|
@@ -87,6 +93,10 @@ ActiveRecord::Schema.define(version: 20160602203942) do
     t.string   "screenshot_content_type"
     t.integer  "screenshot_file_size"
     t.datetime "screenshot_updated_at"
+    t.text     "tagline"
+    t.string   "color"
+    t.string   "icon"
+    t.integer  "position"
   end
 
 end

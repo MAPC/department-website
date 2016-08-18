@@ -10,9 +10,12 @@ class ProjectDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
+    position: Field::Number,
     body: Field::Text,
     icon: Field::String,
     url: Field::String,
+    tagline: Field::String,
+    featured: Field::Boolean,
     preview: PaperclipField
   }.freeze
 
@@ -24,7 +27,9 @@ class ProjectDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
+    :position,
     :body,
+    :featured
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,6 +40,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     :body,
     :icon,
     :url,
+    :featured,
     :preview
   ].freeze
 
@@ -43,10 +49,13 @@ class ProjectDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :title,
+    :position,
     :body,
     :icon,
     :url,
-    :preview
+    :tagline,
+    :preview,
+    :featured
   ].freeze
 
   # Overwrite this method to customize how projects are displayed

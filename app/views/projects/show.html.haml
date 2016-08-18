@@ -1,21 +1,19 @@
-%main
-  %section.subheader
+%main.projects
+  %section.subheader{style: "background-image: url(#{@project.preview.url})"}
     .breadcrumb-wrap
       %nav.breadcrumbs
-        = render_breadcrumbs
-    .container
-      .grid-row
-        .section-info.two-thirds.column-shift
-          %h1 
-            = @project.title
+        = render_breadcrumbs(separator: '')
+        %span
+          = @project.title
 
-%section.container
-  %h1
-    = @project.title
-  .grid-row
-    %aside.one-fourth
-      %button.btn
-        E-mail Us
-        %span.lnr.lnr-arrow-right
-    .two-thirds.column-shift
-      = markdown @project.body
+  %section.container
+    %h1
+      = @project.title
+    .grid-row
+      %aside.one-fourth
+        %a{href: "mailto: contact@mapc.org"}
+          %button.ui.fluid.button.positive
+            Work with us
+            %span.lnr.lnr-arrow-right
+      .two-thirds.column-shift
+        = markdown @project.body

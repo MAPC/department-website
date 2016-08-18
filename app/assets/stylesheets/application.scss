@@ -11,249 +11,215 @@
  * file per style scope.
  *
  *= require_self
+ *= require 'leaflet'
  */
 
- @import "primer";
+@import "primer";
+@import "semantic-ui/collections/grid";
+@import "semantic-ui/elements/header";
+@import "semantic-ui/views/card";
+@import "semantic-ui/elements/icon";
+@import "semantic-ui/elements/button";
+@import "semantic-ui/elements/segment";
+@import "semantic-ui/elements/divider";
+@import "semantic-ui/elements/label";
+@import "semantic-ui/modules/popup";
+@import "semantic-ui/elements/image";
+@import "maki-min";
+
+// MAPC Green: #C6E3B2
+// MAPC Blue: #004B8C
 
 .site-logo {
-  width: 130px;
-  height: 60px;
+  width: 75%;
+  height: auto;
+}
+
+.dept-title {
+  font-family: Fakt,Helvetica,arial,sans-serif;
 }
 
 .section-info {
-  color: #ffffff;
+  color: #FFFFFF;
+  a, a:hover, a:active, a:visited {
+    color: #B5E1F5;
+  }
 }
 
 .menu-item-plain {
   @extend .menu-item;
 }
 
+.reset-position {
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+
 .subheader {
-  background-color: #4A148C;
+  background-color: #004B8C;
+}
+
+.subheader.welcome {
+  padding-bottom: 0;
 }
 
 a {
   color: #34495e;
 }
-// @charset "utf-8";
-// @import "oakland/normalize";
 
+#map {
+  height: 25rem;
+}
 
+.leaflet-control-container {
+  display: none;
+}
 
-// // Global variables for Neat
-// $max-width: 916px !default;
-// $column: 3.625rem !default;
-// $gutter: 1.25rem !default;
-// $visual-grid: true; // Turn this on/off to debug the grid
+.page-header:after {
+  background-color: #004B8C;
+}
 
-// @import "bourbon/bourbon";
-// @import "neat/neat";
+.dept-title:before {
+  width: 0px;
+  background-color: #004B8C;
+}
 
-// // Bourbon and Neat
-// @import "bourbon/bourbon";
-// @import "neat/neat";
+.site-footer .logo-wrap:before {
+  background-color: #004B8C;
+}
 
-// // Global requirements
-// @import "oakland/typography";
-// @import "oakland/variables";
-// @import "oakland/mixins";
-// @import "oakland/icons";
+.ui.cards {
+  margin-bottom: 1rem;
+}
 
-// // Basecoat
-// @import "oakland/base";
-// @import "oakland/type";
-// @import "oakland/layout";
+.menu-item.selected:before, .selected.menu-item-plain:before {
+  background-color: #004B8C;
+}
 
-// @import "oakland/menu";
-// @import "oakland/flex-table";
-// @import "oakland/text-elements";
-// @import "oakland/sections";
-// @import "oakland/media";
+.menu-item:before {
+  background-color: #004B8C;
+}
 
-// .logo img {
-//   height: 18.75em;
-//   margin-top: 6em;
-// }
+.site-logo-wrap {
+  padding-top: 0.35rem;
+}
 
+.splash-icon {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  position: absolute;
+  // right: 0;
+  right: 0;
+  top:0;
+  color: white;
+  opacity: 0.15;
+  font-size: 10rem;
+}
 
-// .doc {
-//   margin: 3em 0;
-//   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-//   font-size: 1.1em;
-//   font-weight: 300;
-
-//   a {
-//     border: 1px solid white;
-//     border-radius: 3px;
-//     padding: 0.75em 0.7em;
-//     color: white;
-//     text-decoration: none;
-//     transition: color 0.1s linear;
-//     &:hover {
-//       background: rgba(0,0,0,0.2);
-//       color: white;
-//       transition: all 0.15s linear;
-//     }
-//   }
-// }
-
-// #body {
-//   background-color: #ffffff
-// }
-
-// .welcome {
-//   -webkit-animation-name: welcome;
-//   -webkit-animation-duration: .9s;
-// }
-
-// @-webkit-keyframes welcome {
-//   from {
-//     -webkit-transform: scale(0);
-//     opacity: 0;
-//   }
-//   50% {
-//    -webkit-transform: scale(0);
-//    opacity: 0;
-//   }
-//   82.5% {
-//     -webkit-transform: scale(1.03);
-//     -webkit-animation-timing-function: ease-out;
-//     opacity: 1;
-//   }
-//   to {
-//     -webkit-transform: scale(1);
-//   }
-// }
-
-// #menu {
-//   height: 150px;
-//   background-color: #f4f5f4;
-//   margin: 0;
-// }
-
-// .hidden.menu {
-//   display: none;
-// }
-
-// .masthead.segment {
-//   min-height: 25rem;
-//   padding: 1em 0em;
-// }
-// .masthead .logo.item img {
-//   margin-right: 1em;
-// }
-// .masthead .ui.menu .ui.button {
-//   margin-left: 0.5em;
-// }
-// .masthead h1.ui.header {
-//   margin-top: 3em;
-//   margin-bottom: 0em;
-//   font-size: 4em;
-//   font-weight: normal;
-// }
-// .masthead h2 {
-//   font-size: 1.7em;
-//   font-weight: normal;
-// }
-
-// .ui.vertical.stripe {
-//   padding: 8em 0em;
-// }
-// .ui.vertical.stripe h3 {
-//   font-size: 2em;
-// }
-// .ui.vertical.stripe .button + h3,
-// .ui.vertical.stripe p + h3 {
-//   margin-top: 3em;
-// }
-// .ui.vertical.stripe .floated.image {
-//   clear: both;
-// }
-// .ui.vertical.stripe p {
-//   font-size: 1.33em;
-// }
-// .ui.vertical.stripe .horizontal.divider {
-//   margin: 3em 0em;
-// }
-
-// .quote.stripe.segment {
-//   padding: 0em;
-// }
-// .quote.stripe.segment .grid .column {
-//   padding-top: 5em;
-//   padding-bottom: 5em;
-// }
-
-// .footer.segment {
-//   padding: 5em 0em;
-// }
-
-// .secondary.pointing.menu .toc.item {
-//   display: none;
-// }
-
-// @media only screen and (max-width: 700px) {
-//   .ui.fixed.menu {
-//     display: none !important;
-//   }
-//   .secondary.pointing.menu .item,
-//   .secondary.pointing.menu .menu {
-//     display: none;
-//   }
-//   .secondary.pointing.menu .toc.item {
-//     display: block;
-//   }
-//   .masthead.segment {
-//     min-height: 350px;
-//   }
-//   .masthead h1.ui.header {
-//     font-size: 2em;
-//     margin-top: 1.5em;
-//   }
-//   .masthead h2 {
-//     margin-top: 0.5em;
-//     font-size: 1.5em;
-//   }
-// }
-
-// .ui.left.sidebar, .ui.right.sidebar {
-//   width: 500px;
-// }
-
-// .ui.selection.list .list>.item, .ui.selection.list>.item {
-//   border-radius: 0;
-//   margin-bottom: 1rem;
-// }
-
-// .ui.button {
+// .ui.cards>.card, .ui.card {
 //   border-radius: 0;
 // }
 
-// div.list div.item {
-//   border-left: green;
-//   border-left-width: thick;
-//   border-left-style: solid;
-// }
+.card-splash-icon {
+  position: absolute;
+  right: 0;
+  bottom:0;
+  color: black;
+  opacity: 0.1;
+  font-size: 1.75rem;
+}
 
-// #masthead {
-//   margin-bottom: 2.5em;
-//   background-image: url("https://design.oaklandca.gov/0/img/hero-1.jpg");
-// }
+.cards {
+  a:hover {
+    text-decoration: none;
+  }
+}
 
-// #footer {
-//   background-color: #cfd0ce;
-// }
+.navicon, .navicon:before, .navicon:after {
+  background: #004B8C;
+}
 
-// #masthead::after {
-//   content: "";
+.header-search .search-icon {
+  color: #004B8C;
+}
 
-//   opacity: 0.8;
-//   top: 0;
-//   left: 0;
-//   bottom: 0;
-//   right: 0;
-//   position: absolute;
-//   z-index: -1;   
-// }
+img.funder-logo {
+  max-width: 245px;
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
+}
 
+.tools {
+  .subheader {
+    background-color: #004B8C;
+  }
 
+  .tool {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ui.cards > .card {
+    min-height: 200px;
+  }
+
+}
+
+.projects {
+  .subheader {
+    background-color: #004B8C;
+  }
+  .breadcrumb-wrap .breadcrumbs a {
+    color: white;
+  }
+}
+
+.service {
+  .subheader {
+    margin-bottom: 0;
+    min-height: 1rem;
+  }
+
+  .content-footer {
+    margin-bottom: 2.5rem;
+  }
+
+  .next-link {
+    right: inherit;
+    padding-right: inherit;
+    margin-right: inherit;
+    width: inherit;
+    text-align: inherit;
+    background-color: rgba(0,75,140, 0.95);
+  }
+}
+
+.group {
+  .subheader {
+    background-color: #004B8C;
+  }
+}
+
+.view-more-box {
+  height:192px;
+  width:100%;
+  text-align: center;
+  background-color: #eee;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}

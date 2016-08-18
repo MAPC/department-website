@@ -8,11 +8,14 @@ class ToolDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
-    title: Field::String,
-    screenshot: Field::String,
-    url: Field::String,
-    body: Field::Text,
+    id:         Field::Number,
+    title:      Field::String,
+    url:        Field::String,
+    body:       Field::Text,
+    tagline:    Field::String,
+    color:      Field::String,
+    icon:       Field::String,
+    position:   Field::Number,
     screenshot: PaperclipField
   }.freeze
 
@@ -45,7 +48,11 @@ class ToolDashboard < Administrate::BaseDashboard
     :title,
     :screenshot,
     :url,
-    :body
+    :tagline,
+    :body,
+    :position,
+    :color,
+    :icon
   ].freeze
 
   # Overwrite this method to customize how tools are displayed

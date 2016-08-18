@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   resources :groups
   resources :datasets
   resources :blogfeed
+  resources :staffs
+
+  get 'about' => 'about#index', as: :about
 
   root to: "welcome#index"
   # The priority is based upon order of creation: first created -> highest priority.

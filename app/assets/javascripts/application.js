@@ -17,3 +17,13 @@
 //= require moment.min.js
 //= require medium.js
 //= require oakland
+//= require leaflet
+//= require semantic-ui
+
+$(document).ready(function() {
+  $('.bio-popup')
+    .popup({
+      lastResort: true
+    })
+  ;
+});

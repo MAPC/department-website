@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.1'
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
@@ -39,6 +39,11 @@ gem 'aws-sdk', '>= 2.0.34'
 gem 'foreman'
 gem 'dotenv-rails'
 gem 'feedjira'
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+gem 'meta-tags'
+gem 'sitemap_generator'
+gem 'leaflet-rails'
+gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
