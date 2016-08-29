@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 20160829200151) do
     t.string   "screenshot"
     t.string   "icon"
     t.string   "url"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.string   "preview_file_name"
     t.string   "preview_content_type"
     t.integer  "preview_file_size"
@@ -66,10 +68,12 @@ ActiveRecord::Schema.define(version: 20160829200151) do
   add_index "projects_services", ["service_id"], name: "index_projects_services_on_service_id", using: :btree
 
   create_table "services", force: :cascade do |t|
-    t.string  "title"
-    t.text    "desc"
-    t.integer "group_id"
-    t.integer "position"
+    t.string   "title"
+    t.text     "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "group_id"
+    t.integer  "position"
   end
 
   create_table "services_tools", id: false, force: :cascade do |t|
@@ -81,10 +85,12 @@ ActiveRecord::Schema.define(version: 20160829200151) do
   add_index "services_tools", ["tool_id"], name: "index_services_tools_on_tool_id", using: :btree
 
   create_table "staff", force: :cascade do |t|
-    t.string  "name"
-    t.string  "email"
-    t.text    "bio"
-    t.integer "group_id"
+    t.string   "name"
+    t.string   "email"
+    t.text     "bio"
+    t.integer  "group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "staffs", force: :cascade do |t|
@@ -107,6 +113,8 @@ ActiveRecord::Schema.define(version: 20160829200151) do
     t.string   "screenshot"
     t.string   "url"
     t.text     "body"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "screenshot_file_name"
     t.string   "screenshot_content_type"
     t.integer  "screenshot_file_size"

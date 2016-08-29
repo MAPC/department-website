@@ -224,3 +224,10 @@ img.funder-logo {
   -webkit-justify-content: center;
   justify-content: center;
 }
+
+// Override default gray to improve the look of circular avatars
+// with a transparent image margin.
+
+div.image {
+  background-color: #FFFFFF !important;
+}
