@@ -40,7 +40,7 @@
           = group
         .ui.four.stackable.cards
           - @staff[group].each do |staff|
-            .card{"data-html": "<div class='content'>#{staff.bio}</div>", "data-position": "top center", class: ("bio-popup" unless staff.bio.empty? )}
+            .card{"data-html": "<div class='content'>#{markdown staff.bio}</div>", "data-position": "top center", class: ("bio-popup" unless staff.bio.empty? )}
               .image
                 %img{src: staff.avatar.url(:thumbnail), class: ""}
               .content
