@@ -38,7 +38,7 @@
           - @service.tools.each do |tool|
             .post-excerpt.one-third
               = link_to tool do
-                %img{alt: tool.title, src: tool.screenshot.url(:thumbnail)}
+                %img{alt: tool.title, src: tool.screenshot.url(:small_thumb)}
               %p.post-data
               %h3
                 = link_to tool.title, tool
