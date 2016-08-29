@@ -19,7 +19,7 @@
           %h2
             = dataset.name
           %p
-            = markdown dataset.bio unless dataset.project
+            = markdown dataset.bio
         = link_to_unless dataset.project, "Learn More", dataset.download, class: " ui bottom attached positive button", target: "_blank" do 
           = link_to "Learn More", dataset.project, class: " ui bottom attached positive button"
         .ui.divider
