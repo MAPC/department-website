@@ -1,0 +1,12 @@
+- content = "<div class='content'>#{markdown staff.bio}</div>"
+- bio_class = staff.bio.present? ? 'bio-popup' : ''
+.ui.card{ data: { html: content, position: 'top center' }, class: bio_class }
+  = mail_to staff.email, class: 'image' do
+    %img{src: staff.avatar.url(:thumbnail), class: ''}
+  .content
+    = staff.name
+    .description
+      = staff.role
+  = mail_to staff.email, class: 'ui bottom attached basic button' do
+    %i.mail.icon
+    Contact

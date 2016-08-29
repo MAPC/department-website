@@ -39,8 +39,9 @@
               %img.funder-logo{src: '/img/barr_logo.jpg'              }
       %hr
         .footer-omega
-          .one-third.right.column-last
-            %small &copy; #{ Time.current.year } Metropolitan Area Planning Council
-          %a.logo-wrap{href: '#'}
+          .two-thirds.right.column-last
+            %a{href: 'http://mapc.org', target: '_blank'}
+              %small &copy; #{ Time.current.year } Metropolitan Area Planning Council
+          %a.logo-wrap{href: 'http://mapc.org', target: '_blank'}
             %img.site-logo{alt: 'MAPC Data Services', onerror: "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", src: '/img/mapc-color.png'}/
 %span.js-media-query-med

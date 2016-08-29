@@ -3,7 +3,7 @@
     .container
       %header.page-header{role: 'banner'}
         .multi-logo-wrap
-          %a.site-logo-wrap{href: 'http://mapc.org', target: '_blank'}
+          %a.site-logo-wrap{href: root_path}
             %img.site-logo.logo-black{alt: 'MAPC Data Services', onerror: "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", src: "/img/mapc-color.png"}/
           %h1.dept-title
             %a{href: '/'}
@@ -29,13 +29,13 @@
           %strong Data Services
         %ul.nav-sub-menu.nav-menu
           %li= link_to 'Our Work',           projects_path, class: 'menu-item'
-          %li= link_to 'Services Directory', "#section-1",  class: 'menu-item'
+          %li= link_to 'Services Directory', '#section-1',  class: 'menu-item'
           %li= link_to 'Flagship Datasets',  datasets_path, class: 'menu-item'
           %li= link_to 'Staff Directory',    about_path,    class: 'menu-item'
           %li= link_to 'Data Tools',         tools_path,    class: 'menu-item'
           %li= link_to 'Flagship Datasets',  datasets_path, class: 'menu-item'
           %li
-            %a{:href => "http://medium.com/dataservicesblog", target: "_blank", class: "menu-item"}
+            %a{href: 'http://medium.com/dataservicesblog', target: '_blank', class: 'menu-item'}
               Department Blog
     %ul.top-level-menu.nav-menu
       %li
