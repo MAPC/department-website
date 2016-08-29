@@ -7,4 +7,5 @@ class Tool < ActiveRecord::Base
   alias_attribute :image, :screenshot
 
   belongs_to :project
+  has_and_belongs_to_many :services
 end
