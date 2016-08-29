@@ -7,7 +7,10 @@
 module Admin
   class ApplicationController < Administrate::ApplicationController
 
-    http_basic_authenticate_with name: ENV.fetch("ADMIN_NAME", 'admin'), password: ENV.fetch("ADMIN_PASSWORD", 'password')
+    helper ApplicationHelper # Include Markdown renderer
+
+    http_basic_authenticate_with name: ENV.fetch('ADMIN_NAME', 'admin'),
+      password: ENV.fetch('ADMIN_PASSWORD', 'password')
 
     # Override this value to specify the number of elements to display at a time
     # on index pages. Defaults to 20.
