@@ -13,6 +13,7 @@ class ServiceDashboard < Administrate::BaseDashboard
     desc: Field::Text,
     group: Field::BelongsTo,
     position: Field::Number,
+    projects: Field::HasMany
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -46,6 +47,7 @@ class ServiceDashboard < Administrate::BaseDashboard
     :desc,
     :group,
     :position,
+    :projects
   ].freeze
 
   # Overwrite this method to customize how services are displayed
