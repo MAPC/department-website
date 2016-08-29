@@ -16,8 +16,9 @@
             Work with us
             %span.lnr.lnr-arrow-right
         %br
-        %h4
-          Related
+        - if @project.dataset || @project.tool
+          %h4
+            Related
         %ul
           - if @project.dataset
             %li
@@ -26,6 +27,6 @@
           - if @project.tool
             %li
               Tool: 
-              = link_to "Tool: #{@project.tool.title}", @project.tool 
+              = link_to "#{@project.tool.title}", @project.tool 
       .two-thirds.column-shift
         = markdown @project.body
