@@ -16,6 +16,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     url: Field::String,
     tagline: Field::String,
     featured: Field::Boolean,
+    services: Field::HasMany,
     preview: PaperclipField
   }.freeze
 
@@ -55,7 +56,8 @@ class ProjectDashboard < Administrate::BaseDashboard
     :url,
     :tagline,
     :preview,
-    :featured
+    :featured,
+    :services
   ].freeze
 
   # Overwrite this method to customize how projects are displayed

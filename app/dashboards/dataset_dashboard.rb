@@ -52,7 +52,7 @@ class DatasetDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how datasets are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(dataset)
-  #   "Dataset ##{dataset.id}"
-  # end
+  def display_resource(dataset)
+    "#{dataset.name}"
+  end
 end

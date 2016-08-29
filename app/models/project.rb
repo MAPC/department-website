@@ -10,6 +10,7 @@ class Project < ActiveRecord::Base
 
   has_one :tool
   has_one :dataset
+  has_and_belongs_to_many :services
 
   def self.default_scope
     order(featured: :desc).order(position: :asc)
