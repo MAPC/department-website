@@ -31,7 +31,7 @@
           %span.lnr.lnr-arrow-right
     .two-thirds.column-shift
       = markdown @service.desc
-      - if @service.tools 
+      - if @service.tools.first 
         %h2
           Related Tools
         .grid-row
@@ -42,7 +42,7 @@
               %p.post-data
               %h3
                 = link_to tool.title, tool
-      - if @service.projects
+      - if @service.projects.first
         %h2
           Related Projects
         .grid-row
@@ -53,7 +53,7 @@
               %p.post-data
               %h3
                 = link_to project.title, project
-      - if @service.datasets 
+      - if @service.datasets.first 
         %h2
           Related Datasets
         .grid-row
