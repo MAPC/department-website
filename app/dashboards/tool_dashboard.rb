@@ -60,7 +60,7 @@ class ToolDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how tools are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(tool)
-  #   "Tool ##{tool.id}"
-  # end
+  def display_resource(tool)
+    "#{tool.title}"
+  end
 end

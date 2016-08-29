@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818193557) do
+ActiveRecord::Schema.define(version: 20160829200151) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20160818193557) do
     t.string   "download"
     t.integer  "project_id"
   end
+
+  create_table "datasets_services", id: false, force: :cascade do |t|
+    t.integer "service_id"
+    t.integer "dataset_id"
+  end
+
+  add_index "datasets_services", ["dataset_id"], name: "index_datasets_services_on_dataset_id", using: :btree
+  add_index "datasets_services", ["service_id"], name: "index_datasets_services_on_service_id", using: :btree
 
   create_table "groups", force: :cascade do |t|
     t.string   "title"
@@ -51,6 +59,14 @@ ActiveRecord::Schema.define(version: 20160818193557) do
     t.integer  "position"
   end
 
+  create_table "projects_services", id: false, force: :cascade do |t|
+    t.integer "service_id"
+    t.integer "project_id"
+  end
+
+  add_index "projects_services", ["project_id"], name: "index_projects_services_on_project_id", using: :btree
+  add_index "projects_services", ["service_id"], name: "index_projects_services_on_service_id", using: :btree
+
   create_table "services", force: :cascade do |t|
     t.string   "title"
     t.text     "desc"
@@ -59,6 +75,14 @@ ActiveRecord::Schema.define(version: 20160818193557) do
     t.integer  "group_id"
     t.integer  "position"
   end
+
+  create_table "services_tools", id: false, force: :cascade do |t|
+    t.integer "service_id"
+    t.integer "tool_id"
+  end
+
+  add_index "services_tools", ["service_id"], name: "index_services_tools_on_service_id", using: :btree
+  add_index "services_tools", ["tool_id"], name: "index_services_tools_on_tool_id", using: :btree
 
   create_table "staff", force: :cascade do |t|
     t.string   "name"
