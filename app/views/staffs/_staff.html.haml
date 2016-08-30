@@ -1,7 +1,7 @@
-.ui.card
-  = link_to staff, class: 'image' do
+.ui.card.link
+  = link_to staff, class: "image" do
     %img{src: staff.avatar.url(:thumbnail), class: ''}
-  .content
+  = link_to staff, class: "ui content" do
     = staff.name
     .description
       = staff.role
