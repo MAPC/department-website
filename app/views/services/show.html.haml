@@ -59,7 +59,7 @@
         .grid-row
           .ui.two.stackable.cards
             - @service.datasets.each do |dataset|
-              = link_to dataset, class: ["ui","card", "tool"] do
+              = link_to dataset.download, class: ["ui","card", "tool"] do
                 .card-splash-icon
                   %i{class: ["huge", "icon"] }
                 .content
