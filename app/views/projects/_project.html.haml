@@ -1,0 +1,6 @@
+.post-excerpt.one-third
+  = link_to project do
+    %img{alt: project.title, src: project.preview.url(:thumbnail)}
+  %p.post-data
+  %h3
+    = link_to project.title, project

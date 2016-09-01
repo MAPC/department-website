@@ -6,14 +6,14 @@
         = render_breadcrumbs(separator: "")
         %span
           = link_to("Home", root_path)
-        %span 
+        %span
           = @group.title
     .container
       .grid-row
         .section-info.two-thirds
-          %h1 
+          %h1
             = @group.title
-          %p 
+          %p
             = markdown @group.desc
   %section
     .container

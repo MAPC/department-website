@@ -11,8 +11,8 @@
       = @project.title
     .grid-row
       %aside.one-fourth
-        %a{href: "mailto: contact@mapc.org"}
-          %button.ui.fluid.button.positive
+        = mail_to 'data@mapc.org' do
+          %button.ui.fluid.button.primary
             Work with us
             %span.lnr.lnr-arrow-right
         %br
@@ -22,11 +22,11 @@
         %ul
           - if @project.dataset
             %li
-              Dataset: 
-              = link_to "#{@project.dataset.name}", @project.dataset.download
+              Dataset:
+              = link_to @project.dataset.name, @project.dataset.download
           - if @project.tool
             %li
-              Tool: 
-              = link_to "#{@project.tool.title}", @project.tool 
+              Tool:
+              = link_to @project.tool.title, @project.tool
       .two-thirds.column-shift
         = markdown @project.body

@@ -25,48 +25,27 @@
 %section.container
   .grid-row
     %aside.one-fourth
-      = link_to 'mailto:data@mapc.org' do
+      = mail_to 'data@mapc.org' do
         %button.ui.fluid.blue.button
           Contact Us
           %span.lnr.lnr-arrow-right
     .two-thirds.column-shift
       = markdown @service.desc
-      - if @service.tools.first 
+      - if @service.tools.any?
         %h2
           Related Tools
         .grid-row
-          - @service.tools.each do |tool|
-            .post-excerpt.one-third
-              = link_to tool do
-                %img{alt: tool.title, src: tool.screenshot.url(:small_thumb)}
-              %p.post-data
-              %h3
-                = link_to tool.title, tool
-      - if @service.projects.first
+          = render partial: 'tools/tool', collection: @service.tools, as: :tool
+
+      - if @service.projects.any?
         %h2
           Related Projects
         .grid-row
-          - @service.projects.each do |project|
-            .post-excerpt.one-third
-              = link_to project do
-                %img{alt: project.title, src: project.preview.url(:thumbnail)}
-              %p.post-data
-              %h3
-                = link_to project.title, project
-      - if @service.datasets.first 
+          = render partial: 'projects/project', collection: @service.projects, as: :project
+
+      - if @service.datasets.any?
         %h2
           Related Datasets
         .grid-row
           .ui.two.stackable.cards
-            - @service.datasets.each do |dataset|
-              = link_to dataset.download, class: ["ui","card", "tool"] do
-                .card-splash-icon
-                  %i{class: ["huge", "icon"] }
-                .content
-                  .header 
-                    = dataset.name
-                  .meta
-                  .description
-                    %p
-                      = truncate(dataset.bio, length: 140)
-
+            = render partial: 'datasets/dataset', collection: @service.datasets, as: :dataset

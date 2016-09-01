@@ -1,0 +1,11 @@
+= link_to dataset.download, class: %w( ui card tool ) do
+  .card-splash-icon
+    %i{ class: %w( huge icon ) }
+  .content
+    .header
+      = dataset.name
+    .meta
+    .description
+      %p
+        = first_sentence_of dataset.bio, truncate: 140
+
