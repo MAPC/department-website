@@ -336,7 +336,7 @@ dl.form {
   display: inline-block;
   width: auto;
   position: relative;
-  padding: 8px $gutter 8px 0; 
+  padding: 8px $gutter 8px 0;
 
   &:hover, &:focus {
     background-color: $white;
@@ -348,7 +348,7 @@ dl.form {
       bottom: 0;
       width: 2px;
       content: "";
-      background-color: $oakland-green;
+      background-color: $mapc-blue;
     }
   }
 
@@ -533,7 +533,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  
+
   // IE9 hacks to hide the background-image and reduce padding
   padding-right: 8px \9;
   background-image: none \9;
@@ -590,7 +590,7 @@ input::-webkit-inner-spin-button {
 .form-info {
   position: relative;
   display: inline-block;
-  color: $oakland-green;
+  color: $mapc-blue;
   padding: 10px 2*$gutter 5px $gutter;
   margin-top: -1.15rem;
   margin-bottom: 1.5rem;
@@ -608,14 +608,14 @@ input::-webkit-inner-spin-button {
       bottom: 0;
       width: 2px;
       content: "";
-      background-color: $oakland-green;
+      background-color: $mapc-blue;
     }
   }
 
   &:active {
-    color: darken($oakland-green, 10%);
+    color: darken($mapc-blue, 10%);
     &:before {
-      background-color: darken($oakland-green, 10%);
+      background-color: darken($mapc-blue, 10%);
     }
   }
 }

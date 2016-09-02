@@ -101,7 +101,7 @@ small, .text-small {
 blockquote {
   margin: 0 0 1.5rem 0;
   padding: 0 $gutter;
-  border-left: 2px solid $oakland-green;
+  border-left: 2px solid $mapc-blue;
   color: $color-text-body;
 }
 
@@ -125,7 +125,7 @@ blockquote {
 // Links
 // --------------------------------------------------
 a {
-  color: $oakland-green;
+  color: $mapc-blue;
   text-decoration: none;
 
   &:hover, &:focus {
@@ -133,7 +133,7 @@ a {
   }
 
   &:active {
-    color: darken($oakland-green, 20%);
+    color: darken($mapc-blue, 20%);
   }
 
   &.muted-link {
