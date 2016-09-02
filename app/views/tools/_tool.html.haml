@@ -1,6 +1,4 @@
 .post-excerpt.one-third
   = link_to tool do
-    %img{alt: tool.title, src: tool.screenshot.url(:small_thumb)}
-  %p.post-data
-  %h3
+    = image_tag tool.screenshot.url(:small_thumb), alt: tool.title
     = link_to tool.title, tool

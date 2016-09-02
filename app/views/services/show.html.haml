@@ -31,20 +31,23 @@
           %span.lnr.lnr-arrow-right
     .two-thirds.column-shift
       = markdown @service.desc
+
+      %hr
+
       - if @service.tools.any?
-        %h2
+        %h3
           Related Tools
         .grid-row
           = render partial: 'tools/tool', collection: @service.tools, as: :tool
 
       - if @service.projects.any?
-        %h2
+        %h3
           Related Projects
         .grid-row
           = render partial: 'projects/project', collection: @service.projects, as: :project
 
       - if @service.datasets.any?
-        %h2
+        %h3
           Related Datasets
         .grid-row
           .ui.two.stackable.cards
