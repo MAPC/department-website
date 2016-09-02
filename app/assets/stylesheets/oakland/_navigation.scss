@@ -83,7 +83,7 @@ $global-nav-width: 213px;
 		li:last-child {
 			margin-bottom: 1rem;
 		}
-	
+
 		&:hover .expand-sub-menu {
 			opacity: 1;
 		}
@@ -104,7 +104,7 @@ $global-nav-width: 213px;
 			ul .menu-item {
 				opacity: 1;
 				transition: all 0.3s ease 0.3s;
-			}	
+			}
 		}
 		ul .menu-item {
 			opacity: 0;
@@ -163,7 +163,7 @@ $global-nav-width: 213px;
 
 			&:before {
 				transition: all 0.2s;
-				background-color: $oakland-green;
+				background-color: $mapc-blue;
 			}
 		}
 	}

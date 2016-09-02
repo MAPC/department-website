@@ -5,13 +5,15 @@
       %i.database.huge.icon
     .breadcrumb-wrap
       %nav.breadcrumbs
-        = render_breadcrumbs(separator: "")
+        = render_breadcrumbs(separator: '')
         %span Data
     .container
       .grid-row
         .section-info.two-thirds
           %h1 Data
-          %p View below to browse our portfolio of flagship datasets. This is not an exhausive list.
+          %p
+            View below to browse our portfolio of flagship datasets.
+            This is not an exhausive list.
   %section
     .container
       - @datasets.each do |dataset|
@@ -20,8 +22,8 @@
             = dataset.name
           %p
             = markdown dataset.bio
-        = link_to_unless dataset.project, "Learn More", dataset.download, class: " ui bottom attached positive button", target: "_blank" do 
-          = link_to "Learn More", dataset.project, class: " ui bottom attached positive button"
+        = link_to_unless dataset.project, 'View Dataset', dataset.download, class: 'ui bottom attached primary button', target: '_blank' do
+          = link_to 'Learn More', dataset.project, class: 'ui bottom attached primary button'
         .ui.divider
 
 %br

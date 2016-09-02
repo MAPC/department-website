@@ -35,7 +35,7 @@
   color: $muted;
 
   &:hover {
-    color: $oakland-green;
+    color: $mapc-blue;
     text-decoration: none;
   }
 }
@@ -72,7 +72,7 @@
 %mid-aligned-pseudo {
   &:before {
     display: inline-block;
-    vertical-align: middle;    
+    vertical-align: middle;
     content: '';
     height: 100%;
   }

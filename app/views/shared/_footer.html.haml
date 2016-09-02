@@ -3,15 +3,15 @@
     %h4 Get In Touch
     .grid-row
       .one-fourth
-        E-mail:
-        %a{href: 'mailto:data@mapc.org'} data@mapc.org
+        Email:
+        = mail_to 'data@mapc.org'
         %br
         Phone:
-        %a{href: 'tel:6179330700'}
+        %a{ href: 'tel:6179330700' }
           (617) 933-0700
       .one-fourth.column-shift
         %strong
-          = link_to 'Get to know us.', staffs_path
+          = link_to 'Meet our team.', about_path
       -# .one-fourth.column-shift
       -#   %strong Provide Feedback
       -#   %br
@@ -21,26 +21,26 @@
       .grid-row
         %ul.footer-links.list-no-style.one-third
           %li
-            %a{href: 'http://bostonindicators.org'}
-              %img.funder-logo{src: '/img/BIP_2015_white.png'         }
+            = link_to 'http://bostonindicators.org' do
+              = image_tag '/img/BIP_2015_white.png', class: 'funder-logo'
           %li
-            %a{href: 'http://tbf.org'}
-              %img.funder-logo{src: '/img/boston-foundation-white.png'}
+            = link_to 'http://tbf.org' do
+              = image_tag '/img/boston-foundation-white.png', class: 'funder-logo'
         %ul.footer-links.list-no-style.one-third
           %li
-            %a{href: 'http://livingcities.org'}
-              %img.funder-logo{src: '/img/living_cities.png'          }
+            = link_to 'http://livingcities.org' do
+              = image_tag '/img/living_cities.png', class: 'funder-logo'
           %li
-            %a{href: 'http://knightfoundation.org'}
-              %img.funder-logo{src: '/img/Knight-Foundation.png'      }
+            = link_to 'http://knightfoundation.org' do
+              = image_tag '/img/Knight-Foundation.png', class: 'funder-logo'
         %ul.footer-links.list-no-style.one-third
           %li
-            %a{href: 'http://barrfoundation.org'}
-              %img.funder-logo{src: '/img/barr_logo.jpg'              }
+            = link_to 'http://barrfoundation.org' do
+              = image_tag '/img/barr_logo.jpg', class: 'funder-logo'
       %hr
         .footer-omega
           .two-thirds.right.column-last
-            %a{href: 'http://mapc.org', target: '_blank'}
+            = link_to 'http://mapc.org', target: '_blank' do
               %small &copy; #{ Time.current.year } Metropolitan Area Planning Council
           %a.logo-wrap{href: 'http://mapc.org', target: '_blank'}
             %img.site-logo{alt: 'MAPC Data Services', onerror: "this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;", src: '/img/mapc-color.png'}/

@@ -8,7 +8,7 @@
 // when being used for the prev/next links.
 // This applies the bg pattern beneath the links
 .pager-footer {
-	
+
   &:before {
     content: "";
     background-image: url(../img/bg-pattern-mobile.png);
@@ -63,10 +63,10 @@
 		background-color: rgba($rockridge-gray, 0.95);
 		text-decoration: none;
 	}
-  
+
   &:active {
-  	background-color: $oakland-green;
-		background-color: rgba($oakland-green, 0.95);
+  	background-color: $mapc-blue;
+		background-color: rgba($mapc-blue, 0.95);
 		text-decoration: none;
 		color: $white;
 	}

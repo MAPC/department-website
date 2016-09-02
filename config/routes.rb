@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :services, only: [:index, :show]
   resources :tools,    only: [:index, :show]
   resources :groups,   only: [:index, :show]
-  resources :datasets, only: [:index, :show]
+  resources :datasets, only: [:index]
   resources :blogfeed, only: [:index, :show]
   resources :staffs,   only: [:index, :show]
 
