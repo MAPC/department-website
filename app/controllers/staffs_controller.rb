@@ -12,8 +12,8 @@ class StaffsController < ApplicationController
   end
 
   def show
+    @staff = Staff.find_by name: params[:id].titleize
     add_breadcrumb "About", :about_path
-    @staff = Staff.find(params[:id])
   end
 
 end

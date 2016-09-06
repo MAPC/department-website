@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
+
   def show
-    @group = Group.find(params[:id])
-    # add_breadcrumb "Groups"
+    @group = Group.find_by title: params[:id].capitalize
   end
+
 end

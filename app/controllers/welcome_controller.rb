@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @groups = Group.all.includes(:services)
-    @projects = Project.sort_featured.limit(5)
+    @groups = Group.includes(:services).all
+    @projects = Project.limit(5)
   end
 end
