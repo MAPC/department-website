@@ -239,3 +239,9 @@ img.funder-logo {
 div.image {
   background-color: #FFFFFF !important;
 }
+
+// Override section link to not wrap text so aggressively
+
+.grid-row.big-menu-group a {
+  padding: 1rem 4rem 1rem 1rem;
+}

@@ -1,0 +1,11 @@
+.menu-item
+  %a{ href: '#' }
+    %h3
+      = group.title
+    %p
+      = group.tagline
+    %p
+      = link_to 'Learn More »', group, class: 'menu-group-link'
+  .big-menu-group.grid-row
+    - group.services.each do |service|
+      = link_to service.title, service, class: 'one-third'
