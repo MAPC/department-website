@@ -3,4 +3,8 @@ class Group < ActiveRecord::Base
 
   has_many :services
 
+  def to_param
+    title.parameterize
+  end
+
 end
