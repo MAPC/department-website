@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829200151) do
+ActiveRecord::Schema.define(version: 20161019014641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160829200151) do
     t.datetime "updated_at", null: false
     t.string   "download"
     t.integer  "project_id"
+    t.integer  "position"
   end
 
   create_table "datasets_services", id: false, force: :cascade do |t|
@@ -48,8 +49,8 @@ ActiveRecord::Schema.define(version: 20160829200151) do
     t.string   "screenshot"
     t.string   "icon"
     t.string   "url"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.string   "preview_file_name"
     t.string   "preview_content_type"
     t.integer  "preview_file_size"

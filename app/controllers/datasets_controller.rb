@@ -1,6 +1,6 @@
 class DatasetsController < ApplicationController
   def index
-    @datasets = Dataset.all
+    @datasets = Dataset.order(position: :asc)
   end
 
   def show
