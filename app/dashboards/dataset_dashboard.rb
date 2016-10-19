@@ -12,6 +12,7 @@ class DatasetDashboard < Administrate::BaseDashboard
     name: Field::String,
     download: Field::String,
     bio: Field::Text,
+    project: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -45,12 +46,13 @@ class DatasetDashboard < Administrate::BaseDashboard
     :name,
     :bio,
     :download,
+    :project,
   ].freeze
 
   # Overwrite this method to customize how datasets are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(dataset)
-  #   "Dataset ##{dataset.id}"
-  # end
+  def display_resource(dataset)
+    "#{dataset.name}"
+  end
 end

@@ -6,14 +6,20 @@ class Project < ActiveRecord::Base
 
   alias_attribute :image, :screenshot
 
-  scope :sort_featured, -> { order(featured: :desc) }
+  has_one :tool
+  has_one :dataset
+  has_and_belongs_to_many :services
 
   def self.default_scope
-    order(featured: :desc).order(position: :asc)
+    order featured: :desc, position: :asc
   end
 
   def blurb
     # May implement conditionals later.
     tagline
+  end
+
+  def to_param
+    "#{id}-#{title.parameterize}"
   end
 end

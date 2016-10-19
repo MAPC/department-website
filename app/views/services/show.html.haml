@@ -25,10 +25,30 @@
 %section.container
   .grid-row
     %aside.one-fourth
-      = link_to 'mailto:data@mapc.org' do
+      = mail_to 'data@mapc.org' do
         %button.ui.fluid.blue.button
           Contact Us
           %span.lnr.lnr-arrow-right
     .two-thirds.column-shift
       = markdown @service.desc
 
+      %hr
+
+      - if @service.tools.any?
+        %h3
+          Related Tools
+        .grid-row
+          = render partial: 'tools/tool', collection: @service.tools, as: :tool
+
+      - if @service.projects.any?
+        %h3
+          Related Projects
+        .grid-row
+          = render partial: 'projects/project', collection: @service.projects, as: :project
+
+      - if @service.datasets.any?
+        %h3
+          Related Datasets
+        .grid-row
+          .ui.two.stackable.cards
+            = render partial: 'datasets/dataset', collection: @service.datasets, as: :dataset

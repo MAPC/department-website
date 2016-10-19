@@ -16,6 +16,7 @@ class ToolDashboard < Administrate::BaseDashboard
     color:      Field::String,
     icon:       Field::String,
     position:   Field::Number,
+    project: Field::BelongsTo,
     screenshot: PaperclipField
   }.freeze
 
@@ -52,13 +53,14 @@ class ToolDashboard < Administrate::BaseDashboard
     :body,
     :position,
     :color,
-    :icon
+    :icon,
+    :project
   ].freeze
 
   # Overwrite this method to customize how tools are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(tool)
-  #   "Tool ##{tool.id}"
-  # end
+  def display_resource(tool)
+    "#{tool.title}"
+  end
 end

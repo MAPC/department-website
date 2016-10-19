@@ -8,7 +8,8 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = Project.find params[:id].partition('-').first
     add_breadcrumb "Our Work", :projects_path
   end
+
 end

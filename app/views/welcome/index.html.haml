@@ -23,7 +23,7 @@
         .section-info.two-thirds
           %h1 Welcome to Data Services
           %p
-            We use data and technology to drive informed decision-making across
+            We use data and technology to support informed decision-making across
             the Metro Boston region.
           %p
             We are part of the
@@ -44,19 +44,7 @@
     %h2 Services
     .grid-row
       %nav.big-menu
-        - @groups.each do |group|
-          .menu-item
-            %a{href: "#"}
-              %h3
-                = group.title
-              %p
-                = group.tagline
-              %p
-                =link_to("Learn More »", group, class: "menu-group-link")
-            .big-menu-group.grid-row
-              - group.services.each do |service|
-                = link_to(service, class: 'one-third') do
-                  = service.title
+        = render partial: 'groups/group', collection: @groups, as: :group
 
 %section#section-2.section
   .container

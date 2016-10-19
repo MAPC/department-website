@@ -8,15 +8,16 @@ class StaffDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
-    name: Field::String,
-    avatar: PaperclipField,
-    bio: Field::Text,
-    position: Field::Number,
-    role: Field::String,
+    id:         Field::Number,
+    name:       Field::String,
+    avatar:     PaperclipField,
+    bio:        Field::Text,
+    position:   Field::Number,
+    role:       Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     group: Field::BelongsTo,
+    email: Field::String
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -27,6 +28,7 @@ class StaffDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :name,
+    :email,
     :avatar,
   ].freeze
 
@@ -35,6 +37,7 @@ class StaffDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :name,
+    :email,
     :avatar,
     :bio,
     :created_at,
@@ -48,6 +51,7 @@ class StaffDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :avatar,
+    :email,
     :bio,
     :position,
     :role,
@@ -57,7 +61,7 @@ class StaffDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how staffs are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(staff)
-  #   "Staff ##{staff.id}"
-  # end
+  def display_resource(staff)
+    staff.name
+  end
 end

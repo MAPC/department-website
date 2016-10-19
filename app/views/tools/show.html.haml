@@ -19,17 +19,26 @@
       .grid-row
         - unless @tool.url == ""
           %aside.one-fourth
-            = link_to @tool.url, target: "_blank" do
-              %button.ui.fluid.button.positive
-                Use This Tool
-                %span.lnr.lnr-arrow-right
-            %br
+            / = link_to @tool.url, target: "_blank" do
+            /   %button.ui.fluid.button.positive
+            /     Use This Tool
+            /     %span.lnr.lnr-arrow-right
+            / %br
             - unless @tool.screenshot == ""
               .ui.card
                 .image
                   .ui.black.ribbon.label
-                    Screenshot
-                  %img{src: @tool.screenshot.url }
+                    Use This Tool
+                  =link_to @tool.url, target: "_blank" do
+                    %img{src: @tool.screenshot.url }
+            - if @tool.project
+              %br
+              %h4
+                Related
+              %ul
+                %li
+                  Project: 
+                  = link_to "#{@tool.project.title}", @tool.project
 
                 
 

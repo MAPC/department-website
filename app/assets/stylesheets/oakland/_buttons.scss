@@ -37,15 +37,15 @@ a.btn {
     background-color: $rockridge-gray;
 
     &:before {
-      background-color: $oakland-green;
+      background-color: $mapc-blue;
     }
   }
 
   &:active {
-    background-color: $oakland-green;
+    background-color: $mapc-blue;
 
     &:before {
-      background-color: $rockridge-gray;      
+      background-color: $rockridge-gray;
     }
   }
 
@@ -97,7 +97,7 @@ a.btn-secondary {
   &:hover,
   &:focus {
     &:before {
-      background-color: $oakland-green;
+      background-color: $mapc-blue;
     }
   }
 

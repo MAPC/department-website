@@ -16,6 +16,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     url: Field::String,
     tagline: Field::String,
     featured: Field::Boolean,
+    services: Field::HasMany,
     preview: PaperclipField
   }.freeze
 
@@ -55,13 +56,14 @@ class ProjectDashboard < Administrate::BaseDashboard
     :url,
     :tagline,
     :preview,
-    :featured
+    :featured,
+    :services
   ].freeze
 
   # Overwrite this method to customize how projects are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(project)
-  #   "Project ##{project.id}"
-  # end
+  def display_resource(project)
+    "#{project.title}"
+  end
 end

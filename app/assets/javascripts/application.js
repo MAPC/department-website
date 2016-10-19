@@ -22,8 +22,6 @@
 
 $(document).ready(function() {
   $('.bio-popup')
-    .popup({
-      lastResort: true
-    })
+    .popup()
   ;
 });

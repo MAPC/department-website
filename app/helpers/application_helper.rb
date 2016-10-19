@@ -1,10 +1,23 @@
+require 'markdownify'
+
 module ApplicationHelper
-  def markdown(text)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
-    no_intra_emphasis: true, 
-    fenced_code_blocks: true,   
-    autolink: true,
-    disable_indented_code_blocks: true)
-    return markdown.render(text).html_safe
+
+  include ActionView::Helpers::TextHelper
+
+  def markdown(source)
+    Markdownify.render(source)
   end
+
+  def first_sentence_of(text, options={})
+    sentence = text.match(/(^.*?[a-z]{2,}[.!?])\s+\W*[A-Z]/).captures.first
+    if length = options[:truncate]
+      truncate sentence, length: length
+    else
+      sentence
+    end
+  rescue StandardError => e
+    Rails.logger.warn e.message
+    return ''
+  end
+
 end

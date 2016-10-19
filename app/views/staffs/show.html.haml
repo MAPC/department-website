@@ -1,0 +1,19 @@
+%main
+  .main-overlay
+  .container
+    %nav.breadcrumbs
+      = render_breadcrumbs(separator: '')
+      %span 
+        = @staff.name
+        = "(#{@staff.role})"
+  %section
+    .container
+      %img.ui.small.right.circular.floated.image{src: @staff.avatar.url(:thumbnail)}
+      %h1
+        About 
+        = @staff.name
+      = markdown @staff.bio
+      = mail_to @staff.email, class: 'ui basic button' do
+        %i.mail.icon
+        Contact
+  %br

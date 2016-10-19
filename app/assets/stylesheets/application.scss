@@ -25,10 +25,18 @@
 @import "semantic-ui/elements/label";
 @import "semantic-ui/modules/popup";
 @import "semantic-ui/elements/image";
+@import "semantic-ui/modules/transition";
 @import "maki-min";
 
-// MAPC Green: #C6E3B2
-// MAPC Blue: #004B8C
+// MAPC Green: #
+
+$mapc-blue: #2068AF;
+$mapc-deep-blue: #004B8C;
+$mapc-green: #C6E3B2;
+
+a {
+  color: $mapc-blue;
+}
 
 .site-logo {
   width: 75%;
@@ -50,6 +58,11 @@
   @extend .menu-item;
 }
 
+// Override green line in primer.css
+.menu-item:hover:before,.menu-item:focus:before {
+  background-color: $mapc-blue;
+}
+
 .reset-position {
   top: 0;
   position: absolute;
@@ -57,15 +70,11 @@
 }
 
 .subheader {
-  background-color: #004B8C;
+  background-color: $mapc-deep-blue;
 }
 
 .subheader.welcome {
   padding-bottom: 0;
-}
-
-a {
-  color: #34495e;
 }
 
 #map {
@@ -77,16 +86,16 @@ a {
 }
 
 .page-header:after {
-  background-color: #004B8C;
+  background-color: $mapc-deep-blue;
 }
 
 .dept-title:before {
   width: 0px;
-  background-color: #004B8C;
+  background-color: $mapc-deep-blue;
 }
 
 .site-footer .logo-wrap:before {
-  background-color: #004B8C;
+  background-color: $mapc-deep-blue;
 }
 
 .ui.cards {
@@ -94,11 +103,11 @@ a {
 }
 
 .menu-item.selected:before, .selected.menu-item-plain:before {
-  background-color: #004B8C;
+  background-color: $mapc-deep-blue;
 }
 
 .menu-item:before {
-  background-color: #004B8C;
+  background-color: $mapc-deep-blue;
 }
 
 .site-logo-wrap {
@@ -136,11 +145,11 @@ a {
 }
 
 .navicon, .navicon:before, .navicon:after {
-  background: #004B8C;
+  background: $mapc-deep-blue;
 }
 
 .header-search .search-icon {
-  color: #004B8C;
+  color: $mapc-deep-blue;
 }
 
 img.funder-logo {
@@ -151,7 +160,7 @@ img.funder-logo {
 
 .tools {
   .subheader {
-    background-color: #004B8C;
+    background-color: $mapc-deep-blue;
   }
 
   .tool {
@@ -167,7 +176,7 @@ img.funder-logo {
 
 .projects {
   .subheader {
-    background-color: #004B8C;
+    background-color: $mapc-deep-blue;
   }
   .breadcrumb-wrap .breadcrumbs a {
     color: white;
@@ -190,13 +199,13 @@ img.funder-logo {
     margin-right: inherit;
     width: inherit;
     text-align: inherit;
-    background-color: rgba(0,75,140, 0.95);
+    background-color: rgba(0, 75, 140, 0.95);
   }
 }
 
 .group {
   .subheader {
-    background-color: #004B8C;
+    background-color: $mapc-deep-blue;
   }
 }
 
@@ -222,4 +231,17 @@ img.funder-logo {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+// Override default gray to improve the look of circular avatars
+// with a transparent image margin.
+
+div.image {
+  background-color: #FFFFFF !important;
+}
+
+// Override section link to not wrap text so aggressively
+
+.grid-row.big-menu-group a {
+  padding: 1rem 4rem 1rem 1rem;
 }
